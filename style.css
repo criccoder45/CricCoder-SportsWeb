@@ -1,0 +1,44 @@
+html {
+  font-family: Poppins;
+  background: ;
+  margin: 0;
+  padding: 0;
+}
+
+/* Add the rest of your styles here */
+/* ... */
+
+.header {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  font-size: 24px;
+}
+
+.header::first-letter {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ff5733;
+}
+
+.button-container {
+  text-align: center;
+  background-color: #87CEEB;
+  padding: 30px;
+  display: inline-block;
+}
+
+.custom-button {
+  background-color: #0074d9;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+}
