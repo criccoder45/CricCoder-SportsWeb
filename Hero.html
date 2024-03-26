@@ -1,40 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible"
- content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Star Sports English</title>
-<script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Sports Hindi</title>
+  <script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
+  <script src="script.js"></script>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff; /* Set text color to white for better visibility */
+    }
+  </style>
 </head>
 <body>
-<div id="video"></div>
+  <div id="video"></div>
 
-<script type="text/javascript">
+  <div style="background-color: #0074d9; text-align: center; padding: 10px;">
+    <button id="joinTelegramButton"
+      style="background-color: #fff; color: #0074d9; border: 2px solid #0074d9; padding: 5px 10px;">Join
+      Telegram</button>
+  </div>
+<script>
+// script.js
+const mpdKey = "49d1acc1dc6426331da6d0a0ff4e67a7";
+const mpdKeyId = "6a9e4204f3f8577ebf6e79b3b18573f8";
+const telegramLink = "https://telegram.me/criccoder";
+const videoFile = "https://bpprod5linear.akamaized.net/bpk-tv/irdeto_com_Channel_252/output/manifest.mpd";
+
+function executeJWPlayerSetup() {
   jwplayer("video").setup({
     width: "100%",
     height: "100%",
     autostart: true,
     mute: false,
-    file: "https://bpprod5linear.akamaized.net/bpk-tv/irdeto_com_Channel_252/output/manifest.mpd",
+    file: videoFile,
     drm: {
       clearkey: {
-        key: "49d1acc1dc6426331da6d0a0ff4e67a7",
-        keyId: "6a9e4204f3f8577ebf6e79b3b18573f8"
+        key: mpdKey,
+        keyId: mpdKeyId
       }
     }
   });
-</script>
+}
 
-<script> if(confirm("Join Our Telegram Channel @criccoder")) { window.location.href = "https://telegram.me/criccoder" }
+function executeTelegramCommand() {
+  if (confirm("Join Our Telegram Channel @criccoder")) {
+    window.location.href = telegramLink;
+  }
+}
+
+function executeTelegramButtonCommand() {
+  const telegramButton = document.getElementById("joinTelegramButton");
+  if (telegramButton) {
+    telegramButton.addEventListener("click", function () {
+      window.open(telegramLink, "_blank");
+    });
+  }
+}
 </script>
-<div style="background-color: #0074d9; text-align: center; padding: 10px;">
-    <a href="https://telegram.me/criccoder" target="_blank">
-      <button id="joinTelegramButton"
-        style="background-color: #fff; color: #0074d9; border: 2px solid #0074d9; padding: 5px 10px;">Join
-        Telegram</button>
-    </a>
-  </div>
+  <script type="text/javascript">
+    // Define mpdKey, mpdKeyId, telegramLink in script.js
+    executeJWPlayerSetup();
+    executeTelegramCommand();
+    executeTelegramButtonCommand();
+  </script>
 </body>
 </html>
