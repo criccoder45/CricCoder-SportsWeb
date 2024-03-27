@@ -1,70 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Star Sports Hindi</title>
-  <script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
-  <script src="script.js"></script>
-  <style>
-    body {
-      background-color: #000;
-      color: #fff; /* Set text color to white for better visibility */
-    }
-  </style>
+<!DOCTYPE html>  
+<html lang="en">  
+<title>Star Sports Hindi</title>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none';">
+    <script src="https://cdn.jsdelivr.net/npm/shaka-player/dist/shaka-player.ui.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/shaka-player/dist/controls.min.css" rel="stylesheet">
 </head>
-<body>
-  <div id="video"></div>
+<body bgcolor="black" style="margin:0"> 
+<center>
+   <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
 
-  <div style="background-color: #0074d9; text-align: center; padding: 10px;">
-    <button id="joinTelegramButton"
-      style="background-color: #fff; color: #0074d9; border: 2px solid #0074d9; padding: 5px 10px;">Join
-      Telegram</button>
-  </div>
+        #ad-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: 9999;
+        }
+
+        #ad-image {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        #video-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #video {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body bgcolor="black" style="margin:0">
+ <div data-shaka-player-container="" style="width: 100%; height: 100%;" class="shaka-mobile shaka-video-container" shaka-controls="true">
+        <video poster="https://disneystar.com/media/2237/ss1-hd-hindi.jpg" autoplay="" data-shaka-player="" id="video" style="width: 100%; height: 100%;" class="shaka-video"</video>
+    <canvas class="shaka-canvas-container"></canvas><div class="shaka-controls-container" shown="true"><div class="shaka-scrim-container"></div><div class="shaka-hidden-fast-forward-container"><div class="shaka-fast-foward-container"><span>0s</span><span class="shaka-forward-rewind-container-icon">fast_forward</span></div></div><div class="shaka-hidden-rewind-container"><div class="shaka-rewind-container"><span>0s</span><span class="shaka-forward-rewind-container-icon">fast_rewind</span></div></div><div class="shaka-server-side-ad-container"></div><div class="shaka-bottom-controls shaka-no-propagation"><div class="shaka-ad-controls shaka-hidden"><button type="button" class="shaka-fullscreen-button material-icons-round shaka-tooltip" aria-label="Full screen">fullscreen</button><div class="shaka-ad-position shaka-hidden"><span class="shaka-ad-position-span"></span></div><div class="shaka-ad-counter"><span class="shaka-ad-counter-span"></span></div></div>
+</center>
+
 <script>
-// script.js
-const mpdKey = "49d1acc1dc6426331da6d0a0ff4e67a7";
-const mpdKeyId = "6a9e4204f3f8577ebf6e79b3b18573f8";
-const telegramLink = "https://telegram.me/criccoder";
-const videoFile = "https://bpprod5linear.akamaized.net/bpk-tv/irdeto_com_Channel_252/output/manifest.mpd";
+ if(confirm("Join Our Telegram Channel @criccoder")) { window.location.href = "https://telegram.me/criccoder" }
+const manifestUri = "https://bpprod5linear.akamaized.net/bpk-tv/irdeto_com_Channel_252/output/manifest.mpd";
 
-function executeJWPlayerSetup() {
-  jwplayer("video").setup({
-    width: "100%",
-    height: "100%",
-    autostart: true,
-    mute: false,
-    file: videoFile,
+async function init() {
+    const video = document.getElementById('video');
+    const ui = video['ui'];
+    const controls = ui.getControls();
+    const player = controls.getPlayer();
+    window.player = player;
+    window.ui = ui;
+
+player.configure({
     drm: {
-      clearkey: {
-        key: mpdKey,
-        keyId: mpdKeyId
-      }
+        "clearKeys": {
+          '63c5428be66e5f6b8692323c1a653593': '86df7318d40fc0afe381b9a6a1e39039'
+        }
     }
-  });
-}
+});
+player.addEventListener('error', onPlayerErrorEvent);
+controls.addEventListener('error', onUIErrorEvent);
+    
+try { await player.load(manifestUri); console.log('The video has now been loaded!'); }
+catch (error) { onPlayerError(error); }}
 
-function executeTelegramCommand() {
-  if (confirm("Join Our Telegram Channel @criccoder")) {
-    window.location.href = telegramLink;
-  }
-}
+function onPlayerErrorEvent(errorEvent) { onPlayerError(event.detail); }
+function onPlayerError(error) { console.error('Error code', error.code, 'object', error); }
+function onUIErrorEvent(errorEvent) { onPlayerError(event.detail); }
+function initFailed(errorEvent) { console.error('Unable to load the UI library!'); }
 
-function executeTelegramButtonCommand() {
-  const telegramButton = document.getElementById("joinTelegramButton");
-  if (telegramButton) {
-    telegramButton.addEventListener("click", function () {
-      window.open(telegramLink, "_blank");
-    });
-  }
-}
+document.addEventListener('shaka-ui-loaded', init);
+document.addEventListener('shaka-ui-load-failed', initFailed);
+
 </script>
-  <script type="text/javascript">
-    // Define mpdKey, mpdKeyId, telegramLink in script.js
-    executeJWPlayerSetup();
-    executeTelegramCommand();
-    executeTelegramButtonCommand();
-  </script>
-</body>
-</html>
+
+</body></html>
+
