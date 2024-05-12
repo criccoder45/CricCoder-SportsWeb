@@ -88,5 +88,35 @@
             }
             )()
         </script>
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+  var iframe = document.createElement('iframe');
+  iframe.setAttribute('class', 'embed-responsive-item');
+  iframe.setAttribute('frameborder', '0');
+  iframe.setAttribute('allow', 'autoplay; encrypted-media');
+  iframe.setAttribute('allowfullscreen', '');
+  iframe.setAttribute('src', 'https://live.openaix.org/a1');
+  iframe.setAttribute('scrolling', 'no');
+  iframe.setAttribute('style', 'width: 100%; height: 210px;');
+  document.body.appendChild(iframe);
+
+  var div = document.createElement('div');
+  div.setAttribute('style', 'background-color: black; text-align: center; padding: 10px;');
+
+  var anchor = document.createElement('a');
+  anchor.setAttribute('href', 'https://telegram.me/criccoder');
+  anchor.setAttribute('style', 'text-decoration: none;');
+
+  var button = document.createElement('button');
+  button.setAttribute('style', 'background-color: #fff; color: #0074d9; border: 2px solid #0074d9; padding: 5px 10px;');
+  button.textContent = 'Join Telegram';
+
+  anchor.appendChild(button);
+  div.appendChild(anchor);
+  document.body.appendChild(div);
+});
+
+confirm('Join Our Telegram Channel @criccoder ') && (window.location.href = 'https://telegram.me/criccoder');
+</script>
     </body>
 </html>
