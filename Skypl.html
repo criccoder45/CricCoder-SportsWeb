@@ -1,0 +1,180 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ultra Stream</title>
+
+
+     <!-- Clappr Builds -->
+    <script src="//cdn.jsdelivr.net/npm/@clappr/player@0.4.7/dist/clappr.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/clappr/clappr-level-selector-plugin@0.3.0/dist/level-selector.min.js"></script>
+    <!-- P2PEngine -->
+    <script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/p2p-engine.min.js"></script>
+    <!-- P2P Clappr Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/swarmcloud-hls@latest/dist/clappr-p2p-plugin.min.js"></script>
+    <script src="sandblaster.min.js"></script>
+
+
+
+
+    <script type="text/javascript">
+
+        eval(function(p, a, c, k, e, d) {
+            e = function(c) {
+                return c.toString(36)
+            };
+            if (!''.replace(/^/, String)) {
+                while (c--) {
+                    d[c.toString(a)] = k[c] || c.toString(a)
+                }
+                k = [function(e) {
+                    return d[e]
+                }];
+                e = function() {
+                    return '\\w+'
+                };
+                c = 1
+            };
+            while (c--) {
+                if (k[c]) {
+                    p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c])
+                }
+            }
+            return p
+        }('(3(){(3 a(){8{(3 b(2){7((\'\'+(2/2)).6!==1||2%5===0){(3(){}).9(\'4\')()}c{4}b(++2)})(0)}d(e){g(a,f)}})()})();', 17, 17, '||i|function|debugger|20|length|if|try|constructor|||else|catch||5000|setTimeout'.split('|'), 0, {}))
+        
+        
+   
+    </script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXEYHWMGBQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXEYHWMGBQ');
+</script>
+
+
+    <style>
+        /* Fix the player container to take up 100% width and to calculate its height based on its children. */
+[data-player] {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0;    
+}
+
+/* Fix the video container to take up 100% width and to calculate its height based on its children. */
+[data-player] .container[data-container] {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Fix the media-control element to take up the entire size of the player. */
+[data-player] .media-control[data-media-control] {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* Fix the video element to take up 100% width and to calculate its height based on its natural aspect ratio. */
+[data-player] video {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#link {
+    position: absolute;
+  top: 10px;
+}
+    </style>
+    
+    
+    <!-- Tssp-->
+<script type="text/javascript" data-cfasync="false">
+/*<![CDATA[/* */
+(function(){var w=window,m="a34fff792f6f853bebce2ce6e3081926",k=[["siteId",950-765+218-871+5085743],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],x=["d3d3LmRpc3BsYXl2ZXJ0aXNpbmcuY29tL2FkUHcvZC9kanF1ZXJ5LXdldWkubWluLmpz","ZDNtem9rdHk5NTFjNXcuY2xvdWRmcm9udC5uZXQvemNsb3VkaW5hcnktanF1ZXJ5LWZpbGUtdXBsb2FkLm1pbi5qcw==","d3d3LnFjeWd3ZHhmdmJmZGwuY29tL2lyQ01iei9kbi92anF1ZXJ5LXdldWkubWluLmpz","d3d3LmZ1eWp2eGpqenpzdXdwLmNvbS9hY2xvdWRpbmFyeS1qcXVlcnktZmlsZS11cGxvYWQubWluLmpz"],q=-1,e,i,f=function(){clearTimeout(i);q++;if(x[q]&&!(1741447358000<(new Date).getTime()&&1<q)){e=w.document.createElement("script");e.type="text/javascript";e.async=!0;var v=w.document.getElementsByTagName("script")[0];e.src="https://"+atob(x[q]);e.crossOrigin="anonymous";e.onerror=f;e.onload=function(){clearTimeout(i);w[m.slice(0,16)+m.slice(0,16)]||f()};i=setTimeout(f,5E3);v.parentNode.insertBefore(e,v)}};if(!w[m]){try{Object.freeze(w[m]=k)}catch(e){}f()}})();
+/*]]>/* */
+</script>
+</head>
+
+<body style="margin:0; background-color:black;">
+
+    <div id="player"></div>
+    <div id="app"></div>
+
+    <script>
+const isHlsjsSupported = Clappr.HLS.HLSJS.isSupported
+    Clappr.HLS.HLSJS.isSupported = function() {
+        if (document.createElement('video').canPlayType('application/vnd.apple.mpegurl')
+            && /Safari/.test(navigator.userAgent)
+            && !/Chrome/.test(navigator.userAgent)) {
+            return false
+        }
+        return isHlsjsSupported()
+    }
+    var p2pConfig = {
+        //logLevel: 'debug',
+        live: true,        // set to true in live mode
+        getStats: function (totalP2PDownloaded, totalP2PUploaded, totalHTTPDownloaded) {
+            var total = totalHTTPDownloaded + totalP2PDownloaded;
+            //console.log(`p2p ratio: ${Math.round(totalP2PDownloaded/total*100)}%, saved traffic: ${totalP2PDownloaded}KB, uploaded: ${totalP2PUploaded}KB`);
+        },
+         trackerZone: 'us',        // if using USA tracker
+    }
+    if (!Clappr.HLS.HLSJS.isSupported()) {
+        // use ServiceWorker based p2p engine if hls.js is not supported, need additional file sw.js
+        new P2pEngineHls.ServiceWorkerEngine(p2pConfig)
+    }
+    
+    P2PEngineHls.tryRegisterServiceWorker(p2pConfig).then(() => {
+        var player = new Clappr.Player(
+            {
+                source: window.atob('Ly9jZG4udWx0cmFzdHJlYW1saW5rcy5vbmxpbmUvZXMxMi9pbmRleC5tM3U4P3Rva2VuPWMyVnlkbVZ5WDNScGJXVTlNVGN4TlRVeU9ESXlOQ1pvWVhOb1gzWmhiSFZsUFUweVRUUk9hbXQ1VDFkUmQwMXFTbXhhVkVVeVdWUlpNVTlVVFROT01sbDZUVlJOTWsxWFNtcE5NbGttWlhod2FYSjVQVEUzTVRVMU16a3dNalFtYVhBOU1UQXpMakUwTnk0eE5qRXVNVGM9'),
+                parentId: "#player",
+                mute: true,
+                autoPlay: false,
+                width: '100%',
+                height: '100%',
+                plugins: [LevelSelector, SwarmCloudClapprPlugin],
+                playback: {
+                    hlsjsConfig: {
+                        maxBufferSize: 0,       // Highly recommended setting in live mode
+                        maxBufferLength: 12,     // Highly recommended setting in live mode
+                        liveSyncDurationCount: 6,   // Highly recommended setting in live mode
+                        // Other hlsjsConfig options provided by hls.js
+                        p2pConfig
+                    }
+                }
+            });
+    })
+    
+
+</script>
+
+
+    <div style="display: none;">
+        <script id="_waunmf">
+            var _wau = _wau || [];
+            _wau.push(["dynamic", "l1q9zv90xl", "nmf", "c4302bffffff", "small"]);
+        </script>
+        <script async src="//waust.at/d.js"></script>
+    </div>
+    
+    
+        <script>
+const _0x376a7f=_0x1bfa;(function(_0x2115b9,_0x29b032){const _0x509d5b=_0x1bfa,_0x8c165c=_0x2115b9();while(!![]){try{const _0x231e37=-parseInt(_0x509d5b(0x1d0))/0x1*(parseInt(_0x509d5b(0x1d8))/0x2)+-parseInt(_0x509d5b(0x1d1))/0x3*(-parseInt(_0x509d5b(0x1de))/0x4)+-parseInt(_0x509d5b(0x1d5))/0x5*(-parseInt(_0x509d5b(0x1da))/0x6)+-parseInt(_0x509d5b(0x1dc))/0x7*(parseInt(_0x509d5b(0x1cb))/0x8)+-parseInt(_0x509d5b(0x1ca))/0x9+-parseInt(_0x509d5b(0x1ce))/0xa*(-parseInt(_0x509d5b(0x1c9))/0xb)+parseInt(_0x509d5b(0x1cf))/0xc*(-parseInt(_0x509d5b(0x1d4))/0xd);if(_0x231e37===_0x29b032)break;else _0x8c165c['push'](_0x8c165c['shift']());}catch(_0x13df97){_0x8c165c['push'](_0x8c165c['shift']());}}}(_0x5b55,0xac7d3));function sandDetect(){const _0x5d1a3a=_0x1bfa;document[_0x5d1a3a(0x1d2)][_0x5d1a3a(0x1df)]=_0x5d1a3a(0x1db);}function _0x5b55(){const _0x3a54c8=['293814mvcnvU','<h1\x20style=\x27color:\x20red;\x27>Sandbox\x20detected,\x20please\x20remove\x20sandbox\x20attributes</h1>','2128343BrdDek','insertAdjacentHTML','3320QQrYSA','innerHTML','11CQRdnX','4798296Wkhruh','8bsOqOT','test','MacIntel','12095540rQHYGc','12JOdgDO','9ghsHyL','4581GBQuOS','body','navigator','17985019wNbgwA','60XheGBs','maxTouchPoints','beforeend','30538smxMJl','platform'];_0x5b55=function(){return _0x3a54c8;};return _0x5b55();}function _0x1bfa(_0x1d8528,_0x263286){const _0x5b55fc=_0x5b55();return _0x1bfa=function(_0x1bfa7f,_0x4cb948){_0x1bfa7f=_0x1bfa7f-0x1c9;let _0x4a2eb1=_0x5b55fc[_0x1bfa7f];return _0x4a2eb1;},_0x1bfa(_0x1d8528,_0x263286);}const isiOSDevice=/iPad|iPhone|iPod/[_0x376a7f(0x1cc)](window[_0x376a7f(0x1d3)][_0x376a7f(0x1d9)])||window['navigator'][_0x376a7f(0x1d9)]===_0x376a7f(0x1cd)&&navigator[_0x376a7f(0x1d6)]>0x1,isEdgeDevice=/Edge/[_0x376a7f(0x1cc)](window['navigator']['userAgent']);!isiOSDevice&&!isEdgeDevice&&document[_0x376a7f(0x1d2)][_0x376a7f(0x1dd)](_0x376a7f(0x1d7),'<object\x20data=\x22data:application/pdf;base64,aG1t\x22\x20width=\x221px\x22\x20height=\x221px\x22\x20style=\x22position:absolute;top:-500px;left:-500px;visibility:hidden;\x22\x20onerror=\x22sandDetect()\x22></object>');
+    </script>
+    
+
+</body>
+
+</html>
