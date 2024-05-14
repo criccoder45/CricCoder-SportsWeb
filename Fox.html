@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset=utf-8 />
-<title>24 TV CANLI YAYIN</title>
-  
-
-  <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
-  <script src="https://unpkg.com/video.js/dist/video.js"></script>
-  <script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
-   
+    <title>GHOSTRUNNER</title>
+    <script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
+    <script>jwplayer.key = "MOYE-MOYE";</script>
 </head>
 <body>
-  <video id="my_video_1" class="video-js vjs-fluid vjs-default-skin" controls preload="auto"
-  data-setup='{}'>
-    <source src="https://criccoder.pages.dev/fox.m3u8" type="application/x-mpegURL">
-  </video>
-  
-<script>
-var player = videojs('my_video_1');
-player.play();
-</script>
-<script>
-  if(confirm("Join Our Telegram Channel @criccoder")) { window.location.href = "https://telegram.me/criccoder" }
-</script> 
-  </body>
+    <div id="player"></div>
+
+    <script>
+        var player = jwplayer("player");
+        player.setup({
+            file: "https://criccoder.pages.dev/fox.m3u8",
+            width: "100%",
+            height: "100%",
+            playbackRateControls: true,
+        });
+    </script>
+</body>
 </html>
