@@ -15,39 +15,9 @@
     <canvas class="shaka-canvas-container"></canvas><div class="shaka-controls-container" shown="true"><div class="shaka-scrim-container"></div><div class="shaka-hidden-fast-forward-container"><div class="shaka-fast-foward-container"><span>0s</span><span class="shaka-forward-rewind-container-icon">fast_forward</span></div></div><div class="shaka-hidden-rewind-container"><div class="shaka-rewind-container"><span>0s</span><span class="shaka-forward-rewind-container-icon">fast_rewind</span></div></div><div class="shaka-server-side-ad-container"></div><div class="shaka-bottom-controls shaka-no-propagation"><div class="shaka-ad-controls shaka-hidden"><button type="button" class="shaka-fullscreen-button material-icons-round shaka-tooltip" aria-label="Full screen">fullscreen</button><div class="shaka-ad-position shaka-hidden"><span class="shaka-ad-position-span"></span></div><div class="shaka-ad-counter"><span class="shaka-ad-counter-span"></span></div></div>
 </center>
 
-<script>if(confirm("Join Our Telegram Channel @criccoder")) { window.location.href = "https://telegram.me/criccoder" }
-    const manifestUri ="https://linear001-gb-dash1-prd-ll.cdn.skycdp.com/016a/Content/DASH_003_720_120/Live/channel(skysportsmainevent)/manifest_720.mpd";
-    
-    async function init() {
-        const video = document.getElementById('video');
-        const ui = video['ui'];
-        const controls = ui.getControls();
-        const player = controls.getPlayer();
-        window.player = player;
-        window.ui = ui;
-    
-    player.configure({
-        drm: {
-            "clearKeys": {
-              '00050559cd31897cd28ef1cad1857606':'32203d3d424a70258a9f676316681bea'
-            }
-        }
-    });
-    player.addEventListener('error', onPlayerErrorEvent);
-    controls.addEventListener('error', onUIErrorEvent);
-        
-    try { await player.load(manifestUri); console.log('The video has now been loaded!'); }
-    catch (error) { onPlayerError(error); }}
-    
-    function onPlayerErrorEvent(errorEvent) { onPlayerError(event.detail); }
-    function onPlayerError(error) { console.error('Error code', error.code, 'object', error); }
-    function onUIErrorEvent(errorEvent) { onPlayerError(event.detail); }
-    function initFailed(errorEvent) { console.error('Unable to load the UI library!'); }
-    
-    document.addEventListener('shaka-ui-loaded', init);
-    document.addEventListener('shaka-ui-load-failed', initFailed);
-    
-    </script>
+<script>
+const _0x48431e=_0x5604;(function(_0x5f2ef5,_0xc1e000){const _0x2b3859=_0x5604,_0x3ec139=_0x5f2ef5();while(!![]){try{const _0x1fb6a4=-parseInt(_0x2b3859(0xa3))/(0x5*-0xc2+0x1*-0xd45+0x1110)*(-parseInt(_0x2b3859(0x99))/(0x119b*0x1+0x4*0x7c+-0x1389))+-parseInt(_0x2b3859(0x6f))/(0x2256+-0x558+-0x1cfb*0x1)+parseInt(_0x2b3859(0x98))/(-0x2573+0x245e+0x119)*(parseInt(_0x2b3859(0x94))/(-0x91*0x2b+-0x11c*-0xd+-0x4fa*-0x2))+-parseInt(_0x2b3859(0x6e))/(-0x109e+-0x16*0x79+-0x2*-0xd85)*(-parseInt(_0x2b3859(0x9e))/(-0x1cbd+-0x2650*-0x1+-0x2*0x4c6))+parseInt(_0x2b3859(0x77))/(0x2691+0x1*-0x1675+-0x1014)+-parseInt(_0x2b3859(0x91))/(0xdd9*0x1+-0x13b5*-0x1+0x2185*-0x1)*(parseInt(_0x2b3859(0xb0))/(-0x1*0x21e5+0xa4*-0x27+0x3aeb))+-parseInt(_0x2b3859(0x72))/(0xa16+-0xcb8+0x2ad)*(parseInt(_0x2b3859(0x78))/(0xa97*-0x1+0xa3c+-0x67*-0x1));if(_0x1fb6a4===_0xc1e000)break;else _0x3ec139['push'](_0x3ec139['shift']());}catch(_0x47897f){_0x3ec139['push'](_0x3ec139['shift']());}}}(_0x1598,-0x575d2+-0xb*-0x1db3+-0x81395*-0x1));confirm(_0x48431e(0xb4)+_0x48431e(0x8c)+_0x48431e(0xa8)+_0x48431e(0xaa))&&(window[_0x48431e(0x82)][_0x48431e(0x79)]=_0x48431e(0x83)+_0x48431e(0x93)+_0x48431e(0x6d));const manifestUri=_0x48431e(0x7b)+_0x48431e(0x97)+_0x48431e(0xae)+_0x48431e(0xaf)+_0x48431e(0x7d)+_0x48431e(0x9c)+_0x48431e(0xa5)+_0x48431e(0xac)+_0x48431e(0xa6)+_0x48431e(0xab)+_0x48431e(0x7a)+_0x48431e(0x9b)+_0x48431e(0x81);async function init(){const _0x5ac7b5=_0x48431e,_0x5c0ca5={'NHBNI':_0x5ac7b5(0x84),'diucu':_0x5ac7b5(0x8b)+_0x5ac7b5(0x9a)+_0x5ac7b5(0xb2)+'ea','GeYiJ':_0x5ac7b5(0xad),'ePyHb':_0x5ac7b5(0x9f)+_0x5ac7b5(0x86)+_0x5ac7b5(0xb3),'FwEZv':function(_0xf80594,_0x3f191f){return _0xf80594(_0x3f191f);}},_0x5399d5=document[_0x5ac7b5(0xb1)+_0x5ac7b5(0x88)](_0x5c0ca5[_0x5ac7b5(0x8a)]),_0x11a349=_0x5399d5['ui'],_0x113ac5=_0x11a349[_0x5ac7b5(0x70)+'s'](),_0x5eb4e8=_0x113ac5[_0x5ac7b5(0x87)]();window[_0x5ac7b5(0x92)]=_0x5eb4e8,window['ui']=_0x11a349,_0x5eb4e8[_0x5ac7b5(0x7c)]({'drm':{'clearKeys':{'00050559cd31897cd28ef1cad1857606':_0x5c0ca5[_0x5ac7b5(0xa1)]}}}),_0x5eb4e8[_0x5ac7b5(0x90)+_0x5ac7b5(0x8e)](_0x5c0ca5[_0x5ac7b5(0x74)],onPlayerErrorEvent),_0x113ac5[_0x5ac7b5(0x90)+_0x5ac7b5(0x8e)](_0x5c0ca5[_0x5ac7b5(0x74)],onUIErrorEvent);try{await _0x5eb4e8[_0x5ac7b5(0x7e)](manifestUri),console[_0x5ac7b5(0x8f)](_0x5c0ca5[_0x5ac7b5(0xa7)]);}catch(_0x1b65c0){_0x5c0ca5[_0x5ac7b5(0x7f)](onPlayerError,_0x1b65c0);}}function onPlayerErrorEvent(_0x20ce79){const _0x3775ed=_0x48431e,_0x296e1a={'shJWR':function(_0x19a592,_0x1844af){return _0x19a592(_0x1844af);}};_0x296e1a[_0x3775ed(0x71)](onPlayerError,event[_0x3775ed(0xa2)]);}function _0x5604(_0x1d73ab,_0x4c4d60){const _0x165164=_0x1598();return _0x5604=function(_0x322733,_0x53e062){_0x322733=_0x322733-(0x19e3+-0x84b*-0x1+-0x1*0x21c1);let _0x12806e=_0x165164[_0x322733];return _0x12806e;},_0x5604(_0x1d73ab,_0x4c4d60);}function _0x1598(){const _0x4d30c6=['addEventLi','9WpXGuS','player','legram.me/','10960KYXJvl','shaka-ui-l','I\x20library!','near001-gb','112bYJJRw','4pqGWAl','4a70258a9f',')/manifest','16a/Conten','ggFAf','243404CqGCuS','The\x20video\x20','cPjPz','diucu','detail','38677exPOJx','ZjvIC','t/DASH_003','ive/channe','ePyHb','annel\x20@cri','Unable\x20to\x20','ccoder','l(skysport','_720_120/L','error','-dash1-prd','-ll.cdn.sk','3717770SzArxO','getElement','676316681b','en\x20loaded!','Join\x20Our\x20T','criccoder','54IoSepG','402225WtOKty','getControl','shJWR','1342rEFhJy','load\x20the\x20U','GeYiJ','oaded','code','3871760exYFtd','17184mBQzJy','href','smainevent','https://li','configure','ycdp.com/0','load','FwEZv','XTNnm','_720.mpd','location','https://te','video','Error\x20code','has\x20now\x20be','getPlayer','ById','oad-failed','NHBNI','32203d3d42','elegram\x20Ch','object','stener','log'];_0x1598=function(){return _0x4d30c6;};return _0x1598();}function onPlayerError(_0x26d816){const _0xdce402=_0x48431e,_0x40c93a={'XTNnm':_0xdce402(0x85),'ggFAf':_0xdce402(0x8d)};console[_0xdce402(0xad)](_0x40c93a[_0xdce402(0x80)],_0x26d816[_0xdce402(0x76)],_0x40c93a[_0xdce402(0x9d)],_0x26d816);}function onUIErrorEvent(_0x229ddf){const _0x458f20=_0x48431e,_0x22f4a8={'cPjPz':function(_0x5b44cf,_0x5004c2){return _0x5b44cf(_0x5004c2);}};_0x22f4a8[_0x458f20(0xa0)](onPlayerError,event[_0x458f20(0xa2)]);}function initFailed(_0x4e6ca1){const _0x54c50b=_0x48431e,_0x4db9c0={'ZjvIC':_0x54c50b(0xa9)+_0x54c50b(0x73)+_0x54c50b(0x96)};console[_0x54c50b(0xad)](_0x4db9c0[_0x54c50b(0xa4)]);}document[_0x48431e(0x90)+_0x48431e(0x8e)](_0x48431e(0x95)+_0x48431e(0x75),init),document[_0x48431e(0x90)+_0x48431e(0x8e)](_0x48431e(0x95)+_0x48431e(0x89),initFailed);
+</script>
 
   <div style="background-color: #0074d9; text-align: center; padding: 10px;">
     <a href="https://telegram.me/criccoder" target="_blank">
