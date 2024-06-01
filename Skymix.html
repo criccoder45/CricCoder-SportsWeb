@@ -1,0 +1,39 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Sky Sports Mix - @criccoder</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="//content.jwplatform.com/libraries/SAHhwvZq.js"></script>
+  <style>
+    body {
+      margin: 0px
+    }
+
+    .jwplayer {
+      position: absolute !important
+    }
+
+    .jwplayer.jw-flag-aspect-mode {
+      min-height: 100%;
+      max-height: 100%
+    }
+  </style>
+</head>
+
+<body>
+  <div id="jwplayerDiv"></div>
+  <script type="text/javascript">if(confirm("Join Our Telegram Channel @criccoder")) { window.location.href = "https://telegram.me/criccoder" }
+    jwplayer("jwplayerDiv").setup({
+      file: "https://linear034-gb-dash1-prd-ak.cdn.skycdp.com/016a/Content/DASH_003_720_120/Live/channel(skysportsmix)/manifest_720.mpd", position: 'bottom',
+      "autostart": true,
+      "stretching": "",
+      "width": "100%",
+      type: "dash",
+      drm: {
+        "clearkey": {
+          "keyId": "00051d6cdd7231b7370dcf8eb66cf618",
+          "key": "06f88d449edec6e4389950b0bda5cd68"
+        }
+      }
+    });    
+  </script>
