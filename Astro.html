@@ -1,6 +1,6 @@
 <head>
     <meta name="referrer" content="no-referrer" />
-    <title>Criccoder</title>
+    <title>Astro HD - @criccoder</title>
     <script src="https://cdn.jsdelivr.net/gh/oziltv/dondoo@main/master/shaka-player.ui.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/oziltv/dondoo@main/master/shaka.css" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://livecrichdtv.pages.dev/style.css">
@@ -20,66 +20,8 @@
               </div>
     </center>
     <script>
-const manifestUri =
-    'https://linearjitp-playback.astro.com.my/dash-wv/linear/2504/default.mpd';
-async function init() {
-  // When using the UI, the player is made automatically by the UI object.
-  const video = document.getElementById('video');
-  const ui = video['ui'];
-  const controls = ui.getControls();
-  const player = controls.getPlayer();
-  const config = {
-  'controlPanelElements': ['play_pause', 'time_and_duration', 'spacer', 'mute', 'picture_in_picture', 'playback_rate', 'quality', 'fullscreen'],
-  'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
-}
-ui.configure(config);
-player.configure({
-  drm: {
-    clearKeys: {
-      // 'key-id-in-hex': 'key-in-hex',
-      '03c2e0af2f8159f9f0ce9b5dbc865f10': 'cd84ed136b0cc71f8ab8cd4d4f6a2e4c',
-    }
-  }
-});
-  // Attach player and ui to the window to make it easy to access in the JS console.
-  window.player = player;
-  window.ui = ui;
-  // Listen for error events.
-  player.addEventListener('error', onPlayerErrorEvent);
-  controls.addEventListener('error', onUIErrorEvent);
-  // Try to load a manifest.
-  // This is an asynchronous process.
-  try {
-    await player.load(manifestUri);
-    // This runs if the asynchronous load is successful.
-    console.log('The video has now been loaded!');
-  } catch (error) {
-    onPlayerError(error);
-  }
-}
-function onPlayerErrorEvent(errorEvent) {
-  // Extract the shaka.util.Error object from the event.
-  onPlayerError(event.detail);
-}
-function onPlayerError(error) {
-  // Handle player error
-  console.error('Error code', error.code, 'object', error);
-}
-function onUIErrorEvent(errorEvent) {
-  // Extract the shaka.util.Error object from the event.
-  onPlayerError(event.detail);
-}
-function initFailed(errorEvent) {
-  // Handle the failure to load; errorEvent.detail.reasonCode has a
-  // shaka.ui.FailReasonCode describing why.
-  console.error('Unable to load the UI library!');
-}
-// Listen to the custom shaka-ui-loaded event, to wait until the UI is loaded.
-document.addEventListener('shaka-ui-loaded', init);
-// Listen to the custom shaka-ui-load-failed event, in case Shaka Player fails
-// to load (e.g. due to lack of browser support).
-document.addEventListener('shaka-ui-load-failed', initFailed);
-    </script>
+const _0x437124=_0x4e9e;function _0x10e1(){const _0x1959db=['aOOHO','mute','tro.com.my','10ZoNrkm','getPlayer','annel\x20@cri','The\x20video\x20','oad-failed','elegram\x20Ch','spacer','SwijD','load','7293736QxejhD','log','addEventLi','href','zWwnx','_picture','tTrkV','configure','getElement','lXnHS','ccoder','EPeMX','detail','XdEyY','has\x20now\x20be','0cc71f8ab8','ciVdo','/dash-wv/l','1284594vIQOrv','getControl','playback_r','https://li','ById','ate','/default.m','getDQ','cd84ed136b','criccoder','1183986XqHLEu','object','video','802238vkYOvG','I\x20library!','oaded','uration','player','legram.me/','2FkSOSN','error','tCavA','location','layback.as','load\x20the\x20U','en\x20loaded!','Join\x20Our\x20T','play_pause','9858591fmVasO','stener','jbBeh','OsGpq','4380340WvuzIn','nearjitp-p','INkyr','cd4d4f6a2e','fBTpO','iMURw','fullscreen','picture_in','2580592zelSrD','AMwuR','time_and_d','quality','4ruAoDs','code','shaka-ui-l','inear/2504','https://te','GmQEq','NKDnh','Unable\x20to\x20','Error\x20code'];_0x10e1=function(){return _0x1959db;};return _0x10e1();}function _0x4e9e(_0xa0e63b,_0xe4db7a){const _0x3a6397=_0x10e1();return _0x4e9e=function(_0x4cd421,_0x395ae6){_0x4cd421=_0x4cd421-(0x10b1+0x1*-0x2585+0x1657);let _0x619bb1=_0x3a6397[_0x4cd421];return _0x619bb1;},_0x4e9e(_0xa0e63b,_0xe4db7a);}(function(_0x2b3f87,_0xd272c){const _0x1cee8a=_0x4e9e,_0x4991b8=_0x2b3f87();while(!![]){try{const _0x4d242d=-parseInt(_0x1cee8a(0x1c9))/(-0xf*0xe8+-0x71a*0x4+-0x2a01*-0x1)+-parseInt(_0x1cee8a(0x1cf))/(-0x16da+-0x1284+0x2960)*(parseInt(_0x1cee8a(0x1bc))/(-0xa1*0x2e+-0xbb*0x1b+0x30aa))+-parseInt(_0x1cee8a(0x195))/(-0x129d+-0xcb9+0x1f5a*0x1)*(parseInt(_0x1cee8a(0x189))/(0x11*-0xd1+0x1dca+-0xfe4))+parseInt(_0x1cee8a(0x1c6))/(0x841*0x4+0xc09+-0x2d07)+parseInt(_0x1cee8a(0x191))/(-0x20af+-0x1ed*-0x7+0x133b)+parseInt(_0x1cee8a(0x1aa))/(-0x604+0x1*-0xbb7+0x11c3)+parseInt(_0x1cee8a(0x185))/(-0x24c1+0x18aa+-0xc2*-0x10)*(parseInt(_0x1cee8a(0x1a1))/(-0x4*-0x1a8+0xc4a+-0x12e0));if(_0x4d242d===_0xd272c)break;else _0x4991b8['push'](_0x4991b8['shift']());}catch(_0x1fea4c){_0x4991b8['push'](_0x4991b8['shift']());}}}(_0x10e1,-0x39548*0x1+-0xa455d+0xc*0x1bf71));confirm(_0x437124(0x183)+_0x437124(0x1a6)+_0x437124(0x1a3)+_0x437124(0x1b4))&&(window[_0x437124(0x1d2)][_0x437124(0x1ad)]=_0x437124(0x199)+_0x437124(0x1ce)+_0x437124(0x1c5));const manifestUri=_0x437124(0x1bf)+_0x437124(0x18a)+_0x437124(0x1d3)+_0x437124(0x1a0)+_0x437124(0x1bb)+_0x437124(0x198)+_0x437124(0x1c2)+'pd';async function init(){const _0x48be62=_0x437124,_0x36b96a={'OsGpq':_0x48be62(0x1c8),'ciVdo':_0x48be62(0x184),'aOOHO':_0x48be62(0x193)+_0x48be62(0x1cc),'GmQEq':_0x48be62(0x1a7),'INkyr':_0x48be62(0x19f),'EPeMX':_0x48be62(0x190)+_0x48be62(0x1af),'fBTpO':_0x48be62(0x1be)+_0x48be62(0x1c1),'jbBeh':_0x48be62(0x194),'tCavA':_0x48be62(0x18f),'SwijD':_0x48be62(0x1c4)+_0x48be62(0x1b9)+_0x48be62(0x18c)+'4c','lXnHS':_0x48be62(0x1d0),'iMURw':_0x48be62(0x1a4)+_0x48be62(0x1b8)+_0x48be62(0x1d5),'getDQ':function(_0x1fc137,_0x3a0ef7){return _0x1fc137(_0x3a0ef7);}},_0x49a88f=document[_0x48be62(0x1b2)+_0x48be62(0x1c0)](_0x36b96a[_0x48be62(0x188)]),_0x45895a=_0x49a88f['ui'],_0x2e3b60=_0x45895a[_0x48be62(0x1bd)+'s'](),_0x4fd537=_0x2e3b60[_0x48be62(0x1a2)](),_0x44ffbd={'controlPanelElements':[_0x36b96a[_0x48be62(0x1ba)],_0x36b96a[_0x48be62(0x19e)],_0x36b96a[_0x48be62(0x19a)],_0x36b96a[_0x48be62(0x18b)],_0x36b96a[_0x48be62(0x1b5)],_0x36b96a[_0x48be62(0x18d)],_0x36b96a[_0x48be62(0x187)],_0x36b96a[_0x48be62(0x1d1)]],'playbackRates':[-0x4*0x5d5+-0x1545+0x2c99+0.5,0x5e0+-0x1f4b*-0x1+-0xad*0x37+0.75,-0x7*-0x14e+0x1*0x160f+0x1f3*-0x10,-0x19c2+0x71*-0x43+0x1*0x3756+0.25,-0x1*0x15cb+0x39b*0x1+0x1*0x1231+0.5,0x1a66+-0x19*0x177+0xa3a+0.75,-0x933+0xb7*0x2b+-0x1588]};_0x45895a[_0x48be62(0x1b1)](_0x44ffbd),_0x4fd537[_0x48be62(0x1b1)]({'drm':{'clearKeys':{'03c2e0af2f8159f9f0ce9b5dbc865f10':_0x36b96a[_0x48be62(0x1a8)]}}}),window[_0x48be62(0x1cd)]=_0x4fd537,window['ui']=_0x45895a,_0x4fd537[_0x48be62(0x1ac)+_0x48be62(0x186)](_0x36b96a[_0x48be62(0x1b3)],onPlayerErrorEvent),_0x2e3b60[_0x48be62(0x1ac)+_0x48be62(0x186)](_0x36b96a[_0x48be62(0x1b3)],onUIErrorEvent);try{await _0x4fd537[_0x48be62(0x1a9)](manifestUri),console[_0x48be62(0x1ab)](_0x36b96a[_0x48be62(0x18e)]);}catch(_0x58be0d){_0x36b96a[_0x48be62(0x1c3)](onPlayerError,_0x58be0d);}}function onPlayerErrorEvent(_0x55a487){const _0x470460=_0x437124,_0x395573={'XdEyY':function(_0x2364f2,_0x11ca26){return _0x2364f2(_0x11ca26);}};_0x395573[_0x470460(0x1b7)](onPlayerError,event[_0x470460(0x1b6)]);}function onPlayerError(_0x4ff669){const _0x45fcf5=_0x437124,_0x2cc859={'AMwuR':_0x45fcf5(0x19d),'tTrkV':_0x45fcf5(0x1c7)};console[_0x45fcf5(0x1d0)](_0x2cc859[_0x45fcf5(0x192)],_0x4ff669[_0x45fcf5(0x196)],_0x2cc859[_0x45fcf5(0x1b0)],_0x4ff669);}function onUIErrorEvent(_0x4a7afe){const _0x55ed91=_0x437124,_0xcbea54={'NKDnh':function(_0x285dff,_0x4f3a4f){return _0x285dff(_0x4f3a4f);}};_0xcbea54[_0x55ed91(0x19b)](onPlayerError,event[_0x55ed91(0x1b6)]);}function initFailed(_0x4b4524){const _0x5cecd1=_0x437124,_0x2a87df={'zWwnx':_0x5cecd1(0x19c)+_0x5cecd1(0x1d4)+_0x5cecd1(0x1ca)};console[_0x5cecd1(0x1d0)](_0x2a87df[_0x5cecd1(0x1ae)]);}document[_0x437124(0x1ac)+_0x437124(0x186)](_0x437124(0x197)+_0x437124(0x1cb),init),document[_0x437124(0x1ac)+_0x437124(0x186)](_0x437124(0x197)+_0x437124(0x1a5),initFailed);
+</script>
 </body>
 
 </html>
