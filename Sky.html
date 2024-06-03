@@ -1,41 +1,63 @@
+<!DOCTYPE html>
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>Sky Sports Cricket</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="//content.jwplatform.com/libraries/SAHhwvZq.js"></script>
-  <style>
-    body {
-      margin: 0px
-    }
-
-    .jwplayer {
-      position: absolute !important
-    }
-
-    .jwplayer.jw-flag-aspect-mode {
-      min-height: 100%;
-      max-height: 100%
-    }
-  </style>
-</head>
-
-<body>
-  <div id="jwplayerDiv"></div>
-  <script type="text/javascript">
-    jwplayer("jwplayerDiv").setup({
-      file: "https://linear007-gb-dash1-prd-cf.cdn.skycdp.com/016a/Content/DASH_003_720_120/Live/channel(skysportscricket)/manifest_720-120.mpd", position: 'bottom',
-      "autostart": true,
-      "stretching": "",
-      "width": "100%",
-      type: "dash",
-      drm: {
-        "clearkey": {
-          "keyId": "00056d5c8882917a4463d5b42ba86c31",
-          "key": "226c39dd7d41b6f0e27cb7d8940f644f"
+    <title>Sky Sports Cricket - @criccoder</title>
+    <link rel=icon href=https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png type=image/png sizes=250x250>
+    <meta name=viewport content='width=device-width, initial-scale=1.0' />
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.1.1/shaka-player.ui.min.js crossorigin=anonymous></script>
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.1.1/controls.min.css crossorigin=anonymous />
+    <style>
+        /* Overflow menu style */
+        
+        .shaka-overflow-menu {
+            background-color: rgb(41, 41, 163);
+            color: rgb(153, 153, 153);
         }
-      }
-    });    
-  </script>
-    <script>
- if(confirm("Join Our Telegram Channel @criccoder")) { window.location.href = "https://telegram.me/criccoder" }</script>
+        
+        .shaka-overflow-menu button:hover {
+            background-color: rgb(45, 45, 45);
+        }
+        
+        .shaka-overflow-button-label {
+            color: rgb(245, 245, 245);
+        }
+        
+        .shaka-current-selection-span {
+            color: rgb(202, 202, 202);
+        }
+        
+        .material-icons-round {
+            color: rgb(230, 230, 230);
+        }
+        
+        /* Overflow sub menu style */
+        
+        .shaka-settings-menu {
+            background-color: rgb(35, 35, 35);
+            color: rgb(255, 255, 255);
+        }
+        
+        .shaka-settings-menu button {
+            color: rgb(255, 255, 255);
+        }
+        
+        .shaka-settings-menu button:hover {
+            background-color: rgb(45, 45, 45);
+        }
+    </style>
+</head>
+<center>
+
+    <body bgcolor=black style=margin:0>
+        <div data-shaka-player-container style=position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover>
+            <video autoplay muted data-shaka-player id=video poster=https://i.postimg.cc/yd9sCwRp/sky-sports-cricket.jpg style=width:100%;height:100%></video>
+</center>
+</div>
+<script>
+    if(confirm("Join Our Telegram Channel @criccoder")) { window.location.href = "https://telegram.me/criccoder" }
+    async function init(){let e=document.getElementById("video"),r=e.ui,n=r.getControls(),o=n.getPlayer();o.configure({drm:{clearKeys:{"00056d5c8882917a4463d5b42ba86c31":"226c39dd7d41b6f0e27cb7d8940f644f"}}}),r.configure({controlPanelElements:["play_pause","mute","volume","spacer","time_and_duration","quality","fullscreen","overflow_menu"],'volumeBarColors':{base:'rgba(63, 187, 1, 1)',level:'rgb(255, 69, 0)',},'seekBarColors':{base:'rgb(41, 41, 163)',buffered:'rgb(35, 99, 3)',played:'rgba(63, 187, 1, 1)',}}),window.player=o,window.ui=r,o.addEventListener("error",onPlayerErrorEvent),n.addEventListener("error",onUIErrorEvent);try{await o.load("https://linear007-gb-dash1-prd-cf.cdn.skycdp.com/016a/Content/DASH_003_720_120/Live/channel(skysportscricket)/manifest_720-120.mpd"),console.log("The video has now been loaded!")}catch(a){onPlayerError(a)}}function onPlayerErrorEvent(e){onPlayerError(event.detail)}function onPlayerError(e){console.error("Error code",e.code,"object",e)}function onUIErrorEvent(e){onPlayerError(event.detail)}function initFailed(e){console.error("Unable to load the UI library!")}document.addEventListener("shaka-ui-loaded",init),document.addEventListener("shaka-ui-load-failed",initFailed);
+</script>
+</body>
+
+</html>
