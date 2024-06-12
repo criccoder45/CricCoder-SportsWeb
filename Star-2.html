@@ -1,22 +1,62 @@
-<!DOCTYPE html>   
-<html lang="en">   
-<title>Star Sports 1 HD - @criccoder</title> 
-    <meta charset="UTF-8"> 
-    <meta name="referrer" content="no-referrer"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none';"> 
-    <script src="https://cdn.jsdelivr.net/npm/shaka-player/dist/shaka-player.ui.min.js"></script> 
-    <link href="https://cdn.jsdelivr.net/npm/shaka-player/dist/controls.min.css" rel="stylesheet"> 
-</head> 
-<body bgcolor="black" style="margin:0">  
-<center> 
- <div data-shaka-player-container="" style="width: 100%; height: 100%;" class="shaka-mobile shaka-video-container" shaka-controls="true"> 
-        <video poster="https://disneystar.com/media/2233/ss1-hd.jpg" autoplay="" data-shaka-player="" id="video" style="width: 100%; height: 100%;" class="shaka-video"</video> 
-    <canvas class="shaka-canvas-container"></canvas><div class="shaka-controls-container" shown="true"><div class="shaka-scrim-container"></div><div class="shaka-hidden-fast-forward-container"><div class="shaka-fast-foward-container"><span>0s</span><span class="shaka-forward-rewind-container-icon">fast_forward</span></div></div><div class="shaka-hidden-rewind-container"><div class="shaka-rewind-container"><span>0s</span><span class="shaka-forward-rewind-container-icon">fast_rewind</span></div></div><div class="shaka-server-side-ad-container"></div><div class="shaka-bottom-controls shaka-no-propagation"><div class="shaka-ad-controls shaka-hidden"><button type="button" class="shaka-fullscreen-button material-icons-round shaka-tooltip" aria-label="Full screen">fullscreen</button><div class="shaka-ad-position shaka-hidden"><span class="shaka-ad-position-span"></span></div><div class="shaka-ad-counter"><span class="shaka-ad-counter-span"></span></div></div> 
-</center> 
- 
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Star Sports English HD - @criccoder</title>
+    <link rel=icon href=https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png type=image/png sizes=250x250>
+    <meta name=viewport content='width=device-width, initial-scale=1.0' />
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.1.1/shaka-player.ui.min.js crossorigin=anonymous></script>
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.1.1/controls.min.css crossorigin=anonymous />
+    <style>
+        /* Overflow menu style */
+        
+        .shaka-overflow-menu {
+            background-color: rgb(41, 41, 163);
+            color: rgb(153, 153, 153);
+        }
+        
+        .shaka-overflow-menu button:hover {
+            background-color: rgb(45, 45, 45);
+        }
+        
+        .shaka-overflow-button-label {
+            color: rgb(245, 245, 245);
+        }
+        
+        .shaka-current-selection-span {
+            color: rgb(202, 202, 202);
+        }
+        
+        .material-icons-round {
+            color: rgb(230, 230, 230);
+        }
+        
+        /* Overflow sub menu style */
+        
+        .shaka-settings-menu {
+            background-color: rgb(35, 35, 35);
+            color: rgb(255, 255, 255);
+        }
+        
+        .shaka-settings-menu button {
+            color: rgb(255, 255, 255);
+        }
+        
+        .shaka-settings-menu button:hover {
+            background-color: rgb(45, 45, 45);
+        }
+    </style>
+</head>
+<center>
+
+    <body bgcolor=black style=margin:0>
+        <div data-shaka-player-container style=position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover>
+            <video autoplay muted data-shaka-player id=video poster=https://disneystar.com/media/2233/ss1-hd.jpg style=width:100%;height:100%></video>
+</center>
+</div>
 <script>
 function _0x4398(_0x22380b,_0x3dd7cc){const _0x5a421f=_0x442b();return _0x4398=function(_0x1c8698,_0x297846){_0x1c8698=_0x1c8698-(0xe*-0x61+0x200+0x46f*0x1);let _0xdf944=_0x5a421f[_0x1c8698];return _0xdf944;},_0x4398(_0x22380b,_0x3dd7cc);}const _0x25d27f=_0x4398;(function(_0x18cc59,_0x55073e){const _0x1281f7=_0x4398,_0x1a7874=_0x18cc59();while(!![]){try{const _0x5cffd9=-parseInt(_0x1281f7(0x15e))/(0xafa+0xa46+-0x153f)*(-parseInt(_0x1281f7(0x146))/(-0x1ba9+-0xbe1*-0x1+0xfca))+-parseInt(_0x1281f7(0x13d))/(0x141f+-0x36*-0xb3+-0x39de)+-parseInt(_0x1281f7(0x133))/(0x142+-0xca8*0x3+0x24ba)+-parseInt(_0x1281f7(0x164))/(0x1*-0x1367+0x1da5+-0x1*0xa39)+parseInt(_0x1281f7(0x160))/(-0xe0b+0x1*-0x26fc+-0x9*-0x5e5)*(-parseInt(_0x1281f7(0x13a))/(-0xa42+-0x6*-0x3a9+-0xbad))+parseInt(_0x1281f7(0x134))/(0xcfb*0x3+-0x218e*-0x1+-0xd*0x593)+-parseInt(_0x1281f7(0x158))/(0x3*-0xbf5+-0x992+-0x16bd*-0x2)*(-parseInt(_0x1281f7(0x126))/(-0x7be+-0x2*0x52c+0x1220));if(_0x5cffd9===_0x55073e)break;else _0x1a7874['push'](_0x1a7874['shift']());}catch(_0x1b37a5){_0x1a7874['push'](_0x1a7874['shift']());}}}(_0x442b,0x1*0x5a247+0x1e5a*-0x25+0x2197d*0x1));function _0x442b(){const _0x1e8bc5=['https://bp','qHusS','addEventLi','VMOph','shaka-ui-l','gSxEJ','ById','error','oad-failed','2T044732&e','criccoder','clpCJ','9ba7e377e9','goAuu','2347281drSkGx','c4dbd56a7a','player','nd=2024063','annel\x20@cri','el_250/out','602ZhQeWH','oaded','576876txlJUg','load','ccoder','getControl','955150FGdSWT','https://te','I\x20library!','video','Error\x20code','configure','hnWJC','detail','40DmtmuD','ed.net/bpk','up.akamaiz','legram.me/','wxRMz','has\x20now\x20be','_com_Chann','stener','put/manife','load\x20the\x20U','-tv/irdeto','Join\x20Our\x20T','location','1558148MqoucA','516016PEFOqD','href','The\x20video\x20','elegram\x20Ch','Unable\x20to\x20','getElement','7LYjWXX','code','getPlayer','1297887vetQdH','en\x20loaded!','QmaOg','VnDmH','prod5catch','1T124732','HBtzb','17f5bf12d9','object','734ySiWgQ','in=2024061','log','st.mpd?beg'];_0x442b=function(){return _0x1e8bc5;};return _0x442b();}confirm(_0x25d27f(0x131)+_0x25d27f(0x137)+_0x25d27f(0x15c)+_0x25d27f(0x162))&&(window[_0x25d27f(0x132)][_0x25d27f(0x135)]=_0x25d27f(0x165)+_0x25d27f(0x129)+_0x25d27f(0x154));const manifestUri=_0x25d27f(0x14a)+_0x25d27f(0x141)+_0x25d27f(0x128)+_0x25d27f(0x127)+_0x25d27f(0x130)+_0x25d27f(0x12c)+_0x25d27f(0x15d)+_0x25d27f(0x12e)+_0x25d27f(0x149)+_0x25d27f(0x147)+_0x25d27f(0x153)+_0x25d27f(0x15b)+_0x25d27f(0x142);async function init(){const _0x18240d=_0x25d27f,_0x5fea21={'wxRMz':_0x18240d(0x121),'VMOph':_0x18240d(0x144)+_0x18240d(0x156)+_0x18240d(0x159)+'3d','clpCJ':_0x18240d(0x151),'qHusS':_0x18240d(0x136)+_0x18240d(0x12b)+_0x18240d(0x13e),'goAuu':function(_0x17d0e5,_0x577b88){return _0x17d0e5(_0x577b88);}},_0x1a601d=document[_0x18240d(0x139)+_0x18240d(0x150)](_0x5fea21[_0x18240d(0x12a)]),_0x1eee09=_0x1a601d['ui'],_0x3d6535=_0x1eee09[_0x18240d(0x163)+'s'](),_0x19410b=_0x3d6535[_0x18240d(0x13c)]();window[_0x18240d(0x15a)]=_0x19410b,window['ui']=_0x1eee09,_0x19410b[_0x18240d(0x123)]({'drm':{'clearKeys':{'35b85f4740035d8b99a192a12e2e3cc0':_0x5fea21[_0x18240d(0x14d)]}}}),_0x19410b[_0x18240d(0x14c)+_0x18240d(0x12d)](_0x5fea21[_0x18240d(0x155)],onPlayerErrorEvent),_0x3d6535[_0x18240d(0x14c)+_0x18240d(0x12d)](_0x5fea21[_0x18240d(0x155)],onUIErrorEvent);try{await _0x19410b[_0x18240d(0x161)](manifestUri),console[_0x18240d(0x148)](_0x5fea21[_0x18240d(0x14b)]);}catch(_0xe7752c){_0x5fea21[_0x18240d(0x157)](onPlayerError,_0xe7752c);}}function onPlayerErrorEvent(_0x2e31a6){const _0xda61d9=_0x25d27f,_0x366f8b={'gSxEJ':function(_0x1e2249,_0x33a95c){return _0x1e2249(_0x33a95c);}};_0x366f8b[_0xda61d9(0x14f)](onPlayerError,event[_0xda61d9(0x125)]);}function onPlayerError(_0x993279){const _0x280d94=_0x25d27f,_0x289010={'hnWJC':_0x280d94(0x122),'HBtzb':_0x280d94(0x145)};console[_0x280d94(0x151)](_0x289010[_0x280d94(0x124)],_0x993279[_0x280d94(0x13b)],_0x289010[_0x280d94(0x143)],_0x993279);}function onUIErrorEvent(_0x4e5044){const _0x4552a0=_0x25d27f,_0xea8e11={'QmaOg':function(_0x42f0b7,_0x634da6){return _0x42f0b7(_0x634da6);}};_0xea8e11[_0x4552a0(0x13f)](onPlayerError,event[_0x4552a0(0x125)]);}function initFailed(_0x47a8af){const _0x11f905=_0x25d27f,_0x127516={'VnDmH':_0x11f905(0x138)+_0x11f905(0x12f)+_0x11f905(0x166)};console[_0x11f905(0x151)](_0x127516[_0x11f905(0x140)]);}document[_0x25d27f(0x14c)+_0x25d27f(0x12d)](_0x25d27f(0x14e)+_0x25d27f(0x15f),init),document[_0x25d27f(0x14c)+_0x25d27f(0x12d)](_0x25d27f(0x14e)+_0x25d27f(0x152),initFailed);
 </script> 
- 
-</body></html>
+</body>
+
+</html> 
