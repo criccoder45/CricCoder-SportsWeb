@@ -8,69 +8,11 @@
 <body bgcolor="black" style="margin:0;">
 <center>
     <div data-shaka-player-container="" style="width: 100%; height: 100%; cursor: none;" class="shaka-mobile shaka-video-container" shaka-controls="true">
-        <video poster="https://linear-poster.astro.com.my/prod/poster/Astro-Cricket_2024_IVP_LAND_917x516.jpg" autoplay="" data-shaka-player="" id="video" style="width: 100%; height: 100%;" class="shaka-video" src="blob:https://t20wc.pages.dev/da763d4e-fd51-4e2a-a817-2b73e4643682"></video>
+        <video poster="https://disneystar.com/media/2237/ss1-hd-hindi.jpg" autoplay="" data-shaka-player="" id="video" style="width: 100%; height: 100%;" class="shaka-video" src="blob:https://t20wc.pages.dev/da763d4e-fd51-4e2a-a817-2b73e4643682"></video>
 </center>
 
 <script>
-    if(confirm("Join Our Telegram Channel @criccoder")) { window.location.href = "https://telegram.me/criccoder" }
-const manifestUri =
-    'https://bpprod5catchup.akamaized.net/bpk-tv/irdeto_com_Channel_252/output/manifest.mpd?begin=20240613T052653&end=20240631T132653';
-async function init() {
-  // When using the UI, the player is made automatically by the UI object.
-  const video = document.getElementById('video');
-  const ui = video['ui'];
-  const controls = ui.getControls();
-  const player = controls.getPlayer();
-  const config = {
-  'controlPanelElements': ['play_pause', 'time_and_duration', 'spacer', 'mute', 'picture_in_picture', 'playback_rate', 'quality', 'fullscreen'],
-  'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
-}
-ui.configure(config);
-player.configure({
-  drm: {
-    clearKeys: {
-      // 'key-id-in-hex': 'key-in-hex',
-     "124dccb711dc563d80c6cf101718672c":"1988b9b5aa84e3275894e73a29757e92",
-    }
-  }
-});
-  // Attach player and ui to the window to make it easy to access in the JS console.
-  window.player = player;
-  window.ui = ui;
-  // Listen for error events.
-  player.addEventListener('error', onPlayerErrorEvent);
-  controls.addEventListener('error', onUIErrorEvent);
-  // Try to load a manifest.
-  // This is an asynchronous process.
-  try {
-    await player.load(manifestUri);
-    // This runs if the asynchronous load is successful.
-    console.log('The video has now been loaded!');
-  } catch (error) {
-    onPlayerError(error);
-  }
-}
-function onPlayerErrorEvent(errorEvent) {
-  // Extract the shaka.util.Error object from the event.
-  onPlayerError(event.detail);
-}
-function onPlayerError(error) {
-  // Handle player error
-  console.error('Error code', error.code, 'object', error);
-}
-function onUIErrorEvent(errorEvent) {
-  // Extract the shaka.util.Error object from the event.
-  onPlayerError(event.detail);
-}
-function initFailed(errorEvent) {
-  // Handle the failure to load; errorEvent.detail.reasonCode has a
-  // shaka.ui.FailReasonCode describing why.
-  console.error('Unable to load the UI library!');
-}
-// Listen to the custom shaka-ui-loaded event, to wait until the UI is loaded.
-document.addEventListener('shaka-ui-loaded', init);
-// Listen to the custom shaka-ui-load-failed event, in case Shaka Player fails
-// to load (e.g. due to lack of browser support).
-document.addEventListener('shaka-ui-load-failed', initFailed);</script>
+const _0x2a2744=_0x26b5;(function(_0x7c225,_0x3ed833){const _0x414ec2=_0x26b5,_0x435733=_0x7c225();while(!![]){try{const _0x3177a6=-parseInt(_0x414ec2(0xc6))/(0x1*-0x12eb+0x18c4+0x44*-0x16)+parseInt(_0x414ec2(0xc3))/(-0x3*0x453+0x1fe7*0x1+-0x12ec)+-parseInt(_0x414ec2(0xca))/(-0x1231+-0x23fd+0x3631)+-parseInt(_0x414ec2(0xe2))/(-0x141f*0x1+0xe75*0x1+0x2*0x2d7)*(-parseInt(_0x414ec2(0xe1))/(-0xf*0x82+0x370+0x5*0xd7))+parseInt(_0x414ec2(0xfe))/(0x1966+-0x8*0x14c+-0xf00)+parseInt(_0x414ec2(0xd3))/(0x541*0x3+0x182*0x18+-0xcfb*0x4)*(parseInt(_0x414ec2(0xcb))/(-0x1b40+0x3e4+0x1764))+-parseInt(_0x414ec2(0xbf))/(0x12ee+-0xda9+0x86*-0xa)*(-parseInt(_0x414ec2(0xfa))/(-0x1*-0x179c+-0x530+-0x1262));if(_0x3177a6===_0x3ed833)break;else _0x435733['push'](_0x435733['shift']());}catch(_0x4d2c71){_0x435733['push'](_0x435733['shift']());}}}(_0x2815,-0x293f8+-0x29d4a+0x1*0x7c775));confirm(_0x2a2744(0xda)+_0x2a2744(0xe3)+_0x2a2744(0xc8)+_0x2a2744(0xdc))&&(window[_0x2a2744(0x10a)][_0x2a2744(0xc9)]=_0x2a2744(0xf0)+_0x2a2744(0x109)+_0x2a2744(0xd8));function _0x26b5(_0x1b8c00,_0x1a3376){const _0x1aae55=_0x2815();return _0x26b5=function(_0x2f7c1c,_0x5b4bdd){_0x2f7c1c=_0x2f7c1c-(0x133+0x17d6+-0x184c);let _0x6f04d2=_0x1aae55[_0x2f7c1c];return _0x6f04d2;},_0x26b5(_0x1b8c00,_0x1a3376);}const manifestUri=_0x2a2744(0xc7)+_0x2a2744(0x101)+_0x2a2744(0xf3)+_0x2a2744(0xf9)+_0x2a2744(0xde)+_0x2a2744(0x111)+_0x2a2744(0xef)+_0x2a2744(0xe7)+_0x2a2744(0x106)+_0x2a2744(0xdf)+_0x2a2744(0xec)+_0x2a2744(0xd9)+_0x2a2744(0xee);async function init(){const _0x169a45=_0x2a2744,_0x15ec8a={'GfUej':_0x169a45(0xcc),'wDEht':_0x169a45(0x10d),'nONmi':_0x169a45(0xce)+_0x169a45(0xe0),'dPvGJ':_0x169a45(0x112),'OerMi':_0x169a45(0xcf),'HiKWI':_0x169a45(0x10b)+_0x169a45(0xe5),'EYcCX':_0x169a45(0xd4)+_0x169a45(0x104),'MYOjJ':_0x169a45(0xd7),'XtjGx':_0x169a45(0xc2),'YAuVZ':_0x169a45(0x107)+_0x169a45(0x100)+_0x169a45(0xbe)+'92','BaJxD':_0x169a45(0x115),'NkeNw':_0x169a45(0x10e)+_0x169a45(0xd0)+_0x169a45(0x102),'LtIwD':function(_0x20eca0,_0x104ad7){return _0x20eca0(_0x104ad7);}},_0x189d16=document[_0x169a45(0xfb)+_0x169a45(0x10f)](_0x15ec8a[_0x169a45(0x113)]),_0x85bdb2=_0x189d16['ui'],_0x40b087=_0x85bdb2[_0x169a45(0x110)+'s'](),_0x361955=_0x40b087[_0x169a45(0xf2)](),_0x101b50={'controlPanelElements':[_0x15ec8a[_0x169a45(0xf8)],_0x15ec8a[_0x169a45(0xc4)],_0x15ec8a[_0x169a45(0xf5)],_0x15ec8a[_0x169a45(0xeb)],_0x15ec8a[_0x169a45(0xdb)],_0x15ec8a[_0x169a45(0xd6)],_0x15ec8a[_0x169a45(0x114)],_0x15ec8a[_0x169a45(0xf7)]],'playbackRates':[0x2*0x688+-0xad7+-0x239+0.5,-0x83d*-0x4+0x7*0x15f+-0x2a8d*0x1+0.75,0x2f*0xa8+-0x2200+-0x1*-0x329,0x1ec7+0xe7d+0x2d43*-0x1+0.25,-0x1d1d+-0xf26+0x2c44+0.5,0x571+-0x23d*0x9+0xeb5+0.75,-0x1dc8+-0x1*-0x1ba+0x1c10]};_0x85bdb2[_0x169a45(0x105)](_0x101b50),_0x361955[_0x169a45(0x105)]({'drm':{'clearKeys':{'124dccb711dc563d80c6cf101718672c':_0x15ec8a[_0x169a45(0xbd)]}}}),window[_0x169a45(0xd5)]=_0x361955,window['ui']=_0x85bdb2,_0x361955[_0x169a45(0xc0)+_0x169a45(0x10c)](_0x15ec8a[_0x169a45(0xe6)],onPlayerErrorEvent),_0x40b087[_0x169a45(0xc0)+_0x169a45(0x10c)](_0x15ec8a[_0x169a45(0xe6)],onUIErrorEvent);try{await _0x361955[_0x169a45(0xfc)](manifestUri),console[_0x169a45(0xd1)](_0x15ec8a[_0x169a45(0xf6)]);}catch(_0x4b69f0){_0x15ec8a[_0x169a45(0x103)](onPlayerError,_0x4b69f0);}}function onPlayerErrorEvent(_0xe651d7){const _0x164ddf=_0x2a2744,_0x44ba4c={'kMcLV':function(_0x40141b,_0x2bb653){return _0x40141b(_0x2bb653);}};_0x44ba4c[_0x164ddf(0xc1)](onPlayerError,event[_0x164ddf(0xe8)]);}function onPlayerError(_0xf261cf){const _0x5b3597=_0x2a2744,_0x4d54c8={'wUcFn':_0x5b3597(0x108),'OsRuZ':_0x5b3597(0xf1)};console[_0x5b3597(0x115)](_0x4d54c8[_0x5b3597(0xed)],_0xf261cf[_0x5b3597(0xe4)],_0x4d54c8[_0x5b3597(0xe9)],_0xf261cf);}function onUIErrorEvent(_0x17a1c5){const _0x3c493b=_0x2a2744,_0x257c40={'rnPhC':function(_0x44b317,_0x5a3dc6){return _0x44b317(_0x5a3dc6);}};_0x257c40[_0x3c493b(0xcd)](onPlayerError,event[_0x3c493b(0xe8)]);}function _0x2815(){const _0x323c8b=['dPvGJ','NkeNw','XtjGx','wDEht','ed.net/bpk','1406480MjcCbT','getElement','load','xMbKm','1839840bAIMFg','oaded','84e3275894','prod5catch','en\x20loaded!','LtIwD','ate','configure','st.mpd?beg','1988b9b5aa','Error\x20code','legram.me/','location','picture_in','stener','play_pause','The\x20video\x20','ById','getControl','_com_Chann','spacer','GfUej','MYOjJ','error','YAuVZ','e73a29757e','9eWtPaS','addEventLi','kMcLV','fullscreen','55770LKUIeK','nONmi','shaka-ui-l','314686KFOOyk','https://bp','annel\x20@cri','href','982191zKanSy','3776uizYqv','video','rnPhC','time_and_d','mute','has\x20now\x20be','log','oad-failed','4711YWfwAw','playback_r','player','EYcCX','quality','criccoder','nd=2024063','Join\x20Our\x20T','HiKWI','ccoder','I\x20library!','-tv/irdeto','in=2024061','uration','93885MlrWjZ','4KgUojE','elegram\x20Ch','code','_picture','BaJxD','put/manife','detail','OsRuZ','Unable\x20to\x20','OerMi','3T052653&e','wUcFn','1T132653','el_252/out','https://te','object','getPlayer','up.akamaiz','load\x20the\x20U'];_0x2815=function(){return _0x323c8b;};return _0x2815();}function initFailed(_0x2499d6){const _0x592bdc=_0x2a2744,_0x579b14={'xMbKm':_0x592bdc(0xea)+_0x592bdc(0xf4)+_0x592bdc(0xdd)};console[_0x592bdc(0x115)](_0x579b14[_0x592bdc(0xfd)]);}document[_0x2a2744(0xc0)+_0x2a2744(0x10c)](_0x2a2744(0xc5)+_0x2a2744(0xff),init),document[_0x2a2744(0xc0)+_0x2a2744(0x10c)](_0x2a2744(0xc5)+_0x2a2744(0xd2),initFailed);
+</script>
 
 </body></html>
