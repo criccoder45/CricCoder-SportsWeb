@@ -1,119 +1,62 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Star Sports Hindi</title>
-    <link rel="stylesheet" href="./player.css">
+    <title>Star Hindi - @criccoder</title>
+    <link rel=icon href=https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png type=image/png sizes=250x250>
+    <meta name=viewport content='width=device-width, initial-scale=1.0' />
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.1.1/shaka-player.ui.min.js crossorigin=anonymous></script>
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.1.1/controls.min.css crossorigin=anonymous />
     <style>
-        #player {
-            position: absolute;
-            width: 100% !important;
-            height: 100% !important;
+        /* Overflow menu style */
+        
+        .shaka-overflow-menu {
+            background-color: rgb(41, 41, 163);
+            color: rgb(153, 153, 153);
+        }
+        
+        .shaka-overflow-menu button:hover {
+            background-color: rgb(45, 45, 45);
+        }
+        
+        .shaka-overflow-button-label {
+            color: rgb(245, 245, 245);
+        }
+        
+        .shaka-current-selection-span {
+            color: rgb(202, 202, 202);
+        }
+        
+        .material-icons-round {
+            color: rgb(230, 230, 230);
+        }
+        
+        /* Overflow sub menu style */
+        
+        .shaka-settings-menu {
+            background-color: rgb(35, 35, 35);
+            color: rgb(255, 255, 255);
+        }
+        
+        .shaka-settings-menu button {
+            color: rgb(255, 255, 255);
+        }
+        
+        .shaka-settings-menu button:hover {
+            background-color: rgb(45, 45, 45);
         }
     </style>
 </head>
-<body>
-<div id="player"></div>
+<center>
 
-<script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
+    <body bgcolor=black style=margin:0>
+        <div data-shaka-player-container style=position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover>
+            <video autoplay muted data-shaka-player id=video poster=https://disneystar.com/media/2237/ss1-hd-hindi.jpg style=width:100%;height:100%></video>
+</center>
+</div>
 <script>
-const playerInstance = jwplayer("player").setup({
-    controls: true,
-    sharing: true,
-    displaytitle: true,
-    autoplay: true,    
-    displaydescription: true,
-    abouttext: "Video Player By CricCoder",
-    aboutlink: "https://t.me/criccoder",
-
-    skin: {
-        name: "netflix"
-    },
-
-    logo: {
-        file: "Star Sports 1 Hindi HD",
-        link: "https://t.me/criccoder"
-    },
-
-    captions: {
-        color: "#FFF",
-        fontSize: 14,
-        backgroundOpacity: 0,
-        edgeStyle: "raised"
-    },
-
-    playlist: [
-        {
-            title: "Star Sports 1 Hindi HD",
-            description: "You're Watching",
-            image: "Star Sports 1 Hindi HD", // Assuming no specific image, using channel name instead
-            sources: [
-                {
-                    file: "https://bpprod3catchup.akamaized.net/bpk-tv/irdeto_com_Channel_252/output/manifest.mpd?begin=20240703T111017&end=20240704T112417",
-                    type: "dash",
-                    label: "1080p",
-                    default: true,
-                    drm: { 
-                        "clearkey": {  
-                            "keyId": "eb0616f6cadb5a1e8df9ab0bbc8df5be",
-                            "key": "b02e4d672a0fd0d64b13b6a6cbe8597e" 
-                        } 
-                    }
-                }
-            ]
-        }
-    ],
-    advertising: {
-        client: "vast",
-        schedule: [
-            {
-                offset: "pre",
-                tag: ""
-            }
-        ]
-    }
-});
-
-playerInstance.on("ready", function () {
-    const playerContainer = playerInstance.getContainer();
-    const buttonContainer = playerContainer.querySelector(".jw-button-container");
-    const spacer = buttonContainer.querySelector(".jw-spacer");
-    const timeSlider = playerContainer.querySelector(".jw-slider-time");
-    buttonContainer.replaceChild(timeSlider, spacer);
-
-    playerInstance.on("adBlock", () => {
-        const modal = document.querySelector("div.modal");
-        modal.style.display = "flex";
-
-        document.getElementById("close").addEventListener("click", () => location.reload());
-    });
-
-    const rewindContainer = playerContainer.querySelector(".jw-display-icon-rewind");
-    const forwardContainer = rewindContainer.cloneNode(true);
-    const forwardDisplayButton = forwardContainer.querySelector(".jw-icon-rewind");
-    forwardDisplayButton.style.transform = "scaleX(-1)";
-    forwardDisplayButton.ariaLabel = "Forward 10 Seconds";
-    const nextContainer = playerContainer.querySelector(".jw-display-icon-next");
-    nextContainer.parentNode.insertBefore(forwardContainer, nextContainer);
-
-    playerContainer.querySelector(".jw-display-icon-next").style.display = "none";
-    const rewindControlBarButton = buttonContainer.querySelector(".jw-icon-rewind");
-    const forwardControlBarButton = rewindControlBarButton.cloneNode(true);
-    forwardControlBarButton.style.transform = "scaleX(-1)";
-    forwardControlBarButton.ariaLabel = "Forward 10 Seconds";
-    rewindControlBarButton.parentNode.insertBefore(forwardControlBarButton, rewindControlBarButton.nextElementSibling);
-
-    [forwardDisplayButton, forwardControlBarButton].forEach((button) => {
-        button.onclick = () => {
-            playerInstance.seek(playerInstance.getPosition() + 10);
-        };
-    });
-});
-
-    if (confirm("Join Our Telegram Channel @criccoder")) { window.location.href = "https://t.me/criccoder"; }
+const _0x381f88=_0xa391;function _0xa391(_0x8aae78,_0x747df3){const _0x4e5f8b=_0x389c();return _0xa391=function(_0x196df1,_0x3405c3){_0x196df1=_0x196df1-(-0x5bb*0x6+0x191*0x4+0x1dcd);let _0x4243b3=_0x4e5f8b[_0x196df1];return _0x4243b3;},_0xa391(_0x8aae78,_0x747df3);}(function(_0x4a9da5,_0xcaadbf){const _0x100ca5=_0xa391,_0x47cd3c=_0x4a9da5();while(!![]){try{const _0xf30560=parseInt(_0x100ca5(0x1e5))/(0xd*0x1e+0x5*0x63+-0x44*0xd)+parseInt(_0x100ca5(0x1e3))/(0x124e+0x2064+0x1958*-0x2)+parseInt(_0x100ca5(0x1bd))/(0xda0+0x6cc+-0x1469)+-parseInt(_0x100ca5(0x205))/(-0xb*0x139+-0x1d55+-0x4*-0xab3)+parseInt(_0x100ca5(0x1c7))/(0xdec+-0xf97*-0x1+-0x1d7e)+parseInt(_0x100ca5(0x1ba))/(0x1bc*-0x13+-0x9d*0x1c+0x1913*0x2)+parseInt(_0x100ca5(0x1b6))/(-0x43*-0x1+0x1*-0xd03+-0x1*-0xcc7)*(-parseInt(_0x100ca5(0x1f1))/(0x52a*-0x5+0x2a*-0xf+-0x12e*-0x18));if(_0xf30560===_0xcaadbf)break;else _0x47cd3c['push'](_0x47cd3c['shift']());}catch(_0x4069c6){_0x47cd3c['push'](_0x47cd3c['shift']());}}}(_0x389c,-0x2f074+0xeee94+-0xdc03));confirm(_0x381f88(0x1ea)+_0x381f88(0x1c4)+_0x381f88(0x1af)+_0x381f88(0x1f7))&&(window[_0x381f88(0x1ca)][_0x381f88(0x200)]=_0x381f88(0x1be)+_0x381f88(0x1fb)+_0x381f88(0x1b7));async function init(){const _0x34d5b9=_0x381f88,_0x1842cc={'YlpHr':_0x34d5b9(0x1bc),'UycTd':_0x34d5b9(0x1dd)+_0x34d5b9(0x1df)+_0x34d5b9(0x207)+'c9','dYzAT':_0x34d5b9(0x1ff),'GgeGm':_0x34d5b9(0x1b1),'kXIRB':_0x34d5b9(0x1ec),'GeWdJ':_0x34d5b9(0x1d1),'UmcAD':_0x34d5b9(0x208)+_0x34d5b9(0x1ef),'GcNTd':_0x34d5b9(0x1e1),'zTmvY':_0x34d5b9(0x1fa),'HSmkY':_0x34d5b9(0x1b2)+_0x34d5b9(0x1fe),'FJNwr':_0x34d5b9(0x1bb)+_0x34d5b9(0x1c2),'bbBIT':_0x34d5b9(0x1db)+_0x34d5b9(0x1dc),'cCQcI':_0x34d5b9(0x1d7)+_0x34d5b9(0x1c3),'VfSWx':_0x34d5b9(0x1ee)+_0x34d5b9(0x1b3),'UGcro':_0x34d5b9(0x1e7),'BIUgX':_0x34d5b9(0x1c0)+_0x34d5b9(0x1fc)+_0x34d5b9(0x20a)+_0x34d5b9(0x1f0)+_0x34d5b9(0x1da)+_0x34d5b9(0x1f2)+_0x34d5b9(0x1e0)+_0x34d5b9(0x1d3)+'d','BKXdS':_0x34d5b9(0x1fd)+_0x34d5b9(0x1bf)+_0x34d5b9(0x1b4),'JeDBV':function(_0x205fa5,_0x30ec5e){return _0x205fa5(_0x30ec5e);}};let _0x5d43f5=document[_0x34d5b9(0x1c5)+_0x34d5b9(0x1c6)](_0x1842cc[_0x34d5b9(0x1f4)]),_0x23c7f9=_0x5d43f5['ui'],_0x2ca418=_0x23c7f9[_0x34d5b9(0x1cf)+'s'](),_0x4ddeb7=_0x2ca418[_0x34d5b9(0x203)]();_0x4ddeb7[_0x34d5b9(0x1eb)]({'drm':{'clearKeys':{'ce789b3ca2ad549cadb492afd1552baa':_0x1842cc[_0x34d5b9(0x1f9)]}}}),_0x23c7f9[_0x34d5b9(0x1eb)]({'controlPanelElements':[_0x1842cc[_0x34d5b9(0x1e8)],_0x1842cc[_0x34d5b9(0x1b9)],_0x1842cc[_0x34d5b9(0x1d4)],_0x1842cc[_0x34d5b9(0x1b5)],_0x1842cc[_0x34d5b9(0x1e6)],_0x1842cc[_0x34d5b9(0x1c8)],_0x1842cc[_0x34d5b9(0x1d9)],_0x1842cc[_0x34d5b9(0x1d5)]],'volumeBarColors':{'base':_0x1842cc[_0x34d5b9(0x1b8)],'level':_0x1842cc[_0x34d5b9(0x209)]},'seekBarColors':{'base':_0x1842cc[_0x34d5b9(0x1b0)],'buffered':_0x1842cc[_0x34d5b9(0x1f5)],'played':_0x1842cc[_0x34d5b9(0x1b8)]}}),window[_0x34d5b9(0x204)]=_0x4ddeb7,window['ui']=_0x23c7f9,_0x4ddeb7[_0x34d5b9(0x1c9)+_0x34d5b9(0x1cc)](_0x1842cc[_0x34d5b9(0x1d2)],onPlayerErrorEvent),_0x2ca418[_0x34d5b9(0x1c9)+_0x34d5b9(0x1cc)](_0x1842cc[_0x34d5b9(0x1d2)],onUIErrorEvent);try{await _0x4ddeb7[_0x34d5b9(0x20c)](_0x1842cc[_0x34d5b9(0x1ce)]),console[_0x34d5b9(0x20b)](_0x1842cc[_0x34d5b9(0x1c1)]);}catch(_0x28270f){_0x1842cc[_0x34d5b9(0x1cd)](onPlayerError,_0x28270f);}}function onPlayerErrorEvent(_0x178bc2){const _0x51c30f=_0x381f88,_0x5b27b2={'tJZEJ':function(_0x44f2a4,_0x12cfa1){return _0x44f2a4(_0x12cfa1);}};_0x5b27b2[_0x51c30f(0x201)](onPlayerError,event[_0x51c30f(0x1e2)]);}function onPlayerError(_0x18258f){const _0x31afa7=_0x381f88,_0x8727de={'PQMNr':_0x31afa7(0x1ed),'CUEmd':_0x31afa7(0x1cb)};console[_0x31afa7(0x1e7)](_0x8727de[_0x31afa7(0x1f6)],_0x18258f[_0x31afa7(0x1d0)],_0x8727de[_0x31afa7(0x202)],_0x18258f);}function onUIErrorEvent(_0x137a93){const _0x32be12=_0x381f88,_0x1003b6={'lBEct':function(_0x553fb0,_0x2f3f49){return _0x553fb0(_0x2f3f49);}};_0x1003b6[_0x32be12(0x206)](onPlayerError,event[_0x32be12(0x1e2)]);}function initFailed(_0x192b15){const _0x3faacc=_0x381f88,_0x2706e3={'hprsf':_0x3faacc(0x1d6)+_0x3faacc(0x1d8)+_0x3faacc(0x1e9)};console[_0x3faacc(0x1e7)](_0x2706e3[_0x3faacc(0x1e4)]);}document[_0x381f88(0x1c9)+_0x381f88(0x1cc)](_0x381f88(0x1f3)+_0x381f88(0x1de),init),document[_0x381f88(0x1c9)+_0x381f88(0x1cc)](_0x381f88(0x1f3)+_0x381f88(0x1f8),initFailed);function _0x389c(){const _0x1385e5=['VfSWx','PQMNr','ccoder','oad-failed','UycTd','fullscreen','legram.me/','prod3catch','The\x20video\x20','enu','play_pause','href','tJZEJ','CUEmd','getPlayer','player','4682400MHjdOY','lBEct','0b32dd5c58','time_and_d','bbBIT','up.akamaiz','log','load','annel\x20@cri','cCQcI','mute','overflow_m',',\x203)','en\x20loaded!','GeWdJ','714GcNIQe','criccoder','FJNwr','GgeGm','368586SLDHnZ','rgba(63,\x201','video','1142064xGtQSO','https://te','has\x20now\x20be','https://bp','BKXdS','87,\x201,\x201)',',\x20163)','elegram\x20Ch','getElement','ById','2993980NFThUj','GcNTd','addEventLi','location','object','stener','JeDBV','BIUgX','getControl','code','spacer','UGcro','put/xxx.mp','kXIRB','HSmkY','Unable\x20to\x20','rgb(41,\x2041','load\x20the\x20U','zTmvY','-tv/irdeto','rgb(255,\x206','9,\x200)','4ffcd9d43a','oaded','fb48902734','el_252/out','quality','detail','2834814tujdiT','hprsf','91953CXTBNO','UmcAD','error','dYzAT','I\x20library!','Join\x20Our\x20T','configure','volume','Error\x20code','rgb(35,\x2099','uration','ed.net/bpk','50984eeoQAQ','_com_Chann','shaka-ui-l','YlpHr'];_0x389c=function(){return _0x1385e5;};return _0x389c();}
 </script>
-<div style="text-align: right;position: fixed;z-index:9999999;bottom: 0;width: auto;right: 1%;cursor: pointer;line-height: 0;display:block !important;"><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website&utm_content=footer_img"><img src="https://www.000webhost.com/static/default.000webhost.com/images/powered-by-000webhost.png" alt="www.000webhost.com"></a></div><script>function getCookie(t){for(var e=t+"=",n=decodeURIComponent(document.cookie).split(";"),o=0;o<n.length;o++){for(var i=n[o];" "==i.charAt(0);)i=i.substring(1);if(0==i.indexOf(e))return i.substring(e.length,i.length)}return""}getCookie("hostinger")&&(document.cookie="hostinger=;expires=Thu, 01 Jan 1970 00:00:01 GMT;",location.reload());var wordpressAdminBody=document.getElementsByClassName("wp-admin")[0],notification=document.getElementsByClassName("notice notice-success is-dismissible"),hostingerLogo=document.getElementsByClassName("hlogo"),mainContent=document.getElementsByClassName("notice_content")[0];if(null!=wordpressAdminBody&¬ification.length>0&&null!=mainContent && new Date().toISOString().slice(0, 10) > '2023-10-29' && new Date().toISOString().slice(0, 10) < '2023-11-27'){var googleFont=document.createElement("link");googleFontHref=document.createAttribute("href"),googleFontRel=document.createAttribute("rel"),googleFontHref.value="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700",googleFontRel.value="stylesheet",googleFont.setAttributeNode(googleFontHref),googleFont.setAttributeNode(googleFontRel);var css="@media only screen and (max-width: 576px) {#main_content {max-width: 320px !important;} #main_content h1 {font-size: 30px !important;} #main_content h2 {font-size: 40px !important; margin: 20px 0 !important;} #main_content p {font-size: 14px !important;} #main_content .content-wrapper {text-align: center !important;}} @media only screen and (max-width: 781px) {#main_content {margin: auto; justify-content: center; max-width: 445px;}} @media only screen and (max-width: 1325px) {.web-hosting-90-off-image-wrapper {position: absolute; max-width: 95% !important;} .notice_content {justify-content: center;} .web-hosting-90-off-image {opacity: 0.3;}} @media only screen and (min-width: 769px) {.notice_content {justify-content: space-between;} #main_content {margin-left: 5%; max-width: 445px;} .web-hosting-90-off-image-wrapper {position: absolute; display: flex; justify-content: center; width: 100%; }} .web-hosting-90-off-image {max-width: 90%;} .content-wrapper {min-height: 454px; display: flex; flex-direction: column; justify-content: center; z-index: 5} .notice_content {display: flex; align-items: center;} * {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;} .upgrade_button_red_sale{box-shadow: 0 2px 4px 0 rgba(255, 69, 70, 0.2); max-width: 350px; border: 0; border-radius: 3px; background-color: #ff4546 !important; padding: 15px 55px !important; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 600; color: #ffffff;} .upgrade_button_red_sale:hover{color: #ffffff !important; background: #d10303 !important;}",style=document.createElement("style"),sheet=window.document.styleSheets[0];style.styleSheet?style.styleSheet.cssText=css:style.appendChild(document.createTextNode(css)),document.getElementsByTagName("head")[0].appendChild(style),document.getElementsByTagName("head")[0].appendChild(googleFont);var button=document.getElementsByClassName("upgrade_button_red")[0],link=button.parentElement;link.setAttribute("href","https://www.hostinger.com/hosting-starter-offer?utm_source=000webhost&utm_medium=panel&utm_campaign=000-wp"),link.innerHTML='<button class="upgrade_button_red_sale">Claim deal</button>',(notification=notification[0]).setAttribute("style","padding-bottom: 0; padding-top: 5px; background-color: #040713; background-size: cover; background-repeat: no-repeat; color: #ffffff; border-left-color: #040713;"),notification.className="notice notice-error is-dismissible";var mainContentHolder=document.getElementById("main_content");mainContentHolder.setAttribute("style","padding: 0;"),hostingerLogo[0].remove();var h1Tag=notification.getElementsByTagName("H1")[0];h1Tag.className="000-h1",h1Tag.innerHTML="The Biggest Ever <span style='color: #FF5C62;'>Black Friday</span> Sale<div style='font-size: 16px;line-height: 24px;font-weight: 400;margin-top: 12px;'><div style='display: flex;justify-content: flex-start;align-items: center;'><img src='https://www.000webhost.com/static/default.000webhost.com/images/generic/green-check-mark.png' alt='' style='margin-right: 10px; width: 20px;'>Managed WordPress Hosting</div><div style='display: flex;justify-content: flex-start;align-items: center;'><img src='https://www.000webhost.com/static/default.000webhost.com/images/generic/green-check-mark.png' alt='' style='margin-right: 10px; width: 20px;'>WordPress Acceleration</div><div style='display: flex;justify-content: flex-start;align-items: center;'><img src='https://www.000webhost.com/static/default.000webhost.com/images/generic/green-check-mark.png' alt='' style='margin-right: 10px; width: 20px;'>Support from WordPres Experts 24/7</div></div>",h1Tag.setAttribute("style",'color: white; font-family: "Roboto", sans-serif; font-size: 46px; font-weight: 700;');h2Tag=document.createElement("H2");h2Tag.innerHTML="<span style='font-size: 20px'>$</span>2.49<span style='font-size: 20px'>/mo</span>",h2Tag.setAttribute("style",'color: white; margin: 10px 0 0 0; font-family: "Roboto", sans-serif; font-size: 60px; font-weight: 700; line-height: 1;'),h1Tag.parentNode.insertBefore(h2Tag,h1Tag.nextSibling);var paragraph=notification.getElementsByTagName("p")[0];paragraph.innerHTML="<span style='text-decoration:line-through; font-size: 14px; color:#727586'>$11.99.mo</span><br>+ 2 Months Free",paragraph.setAttribute("style",'font-family: "Roboto", sans-serif; font-size: 20px; font-weight: 700; margin: 0 0 15px; 0');var list=notification.getElementsByTagName("UL")[0];list.remove();var org_html=mainContent.innerHTML,new_html='<div class="content-wrapper">'+mainContent.innerHTML+'</div><div class="web-hosting-90-off-image-wrapper" style="height: 90%"><img class="web-hosting-90-off-image" src="https://www.000webhost.com/static/default.000webhost.com/images/sales/bf2023/hero.png"></div>';mainContent.innerHTML=new_html;var saleImage=mainContent.getElementsByClassName("web-hosting-90-off-image")[0]}else if(null!=wordpressAdminBody&¬ification.length>0&&null!=mainContent){var bulletPoints = mainContent.getElementsByTagName('li');var replacement=['Increased performance (up to 5x faster) - Thanks to Hostinger’s WordPress Acceleration and Caching solutions','WordPress AI tools - Creating a new website has never been easier','Weekly or daily backups - Your data will always be safe','Fast and dedicated 24/7 support - Ready to help you','Migration of your current WordPress sites to Hostinger is automatic and free!','Try Premium Web Hosting now - starting from $1.99/mo'];for (var i=0;i<bulletPoints.length;i++){bulletPoints[i].innerHTML = replacement[i];}}</script></body>
+</body>
+
 </html>
