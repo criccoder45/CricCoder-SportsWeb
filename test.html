@@ -1,61 +1,54 @@
+
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Star Sports 2 HD - @criccoder</title>
-    <link rel=icon href=https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png type=image/png sizes=250x250>
-    <meta name=viewport content='width=device-width, initial-scale=1.0' />
-    <script src=https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.1.1/shaka-player.ui.min.js crossorigin=anonymous></script>
-    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.1.1/controls.min.css crossorigin=anonymous />
-    <style>
-        /* Overflow menu style */
-        
-        .shaka-overflow-menu {
-            background-color: rgb(41, 41, 163);
-            color: rgb(153, 153, 153);
+    <title>Shaka Player YouTube Theme</title>
+    <meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.6/controls.min.css" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.6/shaka-player.ui.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="youtube-theme.css" />
+    <style type="text/css">
+        /* Your CSS styles */
+        #wrap { 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            border: none;
+            margin: 0;
+            padding: 0;
         }
-        
-        .shaka-overflow-menu button:hover {
-            background-color: rgb(45, 45, 45);
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
         }
-        
-        .shaka-overflow-button-label {
-            color: rgb(245, 245, 245);
-        }
-        
-        .shaka-current-selection-span {
-            color: rgb(202, 202, 202);
-        }
-        
-        .material-icons-round {
-            color: rgb(230, 230, 230);
-        }
-        
-        /* Overflow sub menu style */
-        
-        .shaka-settings-menu {
-            background-color: rgb(35, 35, 35);
-            color: rgb(255, 255, 255);
-        }
-        
-        .shaka-settings-menu button {
-            color: rgb(255, 255, 255);
-        }
-        
-        .shaka-settings-menu button:hover {
-            background-color: rgb(45, 45, 45);
+        video {
+            width: 100vw;
+            height: 56.25vw; /* 16:9 aspect ratio (9/16 * 100vw) */
+            max-width: 100vw;
+            max-height: 100vh;
+            object-fit: contain;
         }
     </style>
 </head>
-<center>
+<body bgcolor='black' style='margin:0'>
+    <section id="wrap">
+        <div class="youtube-theme">
+            <video autostart="true" data-shaka-player id="youtube-theme" style="width:100%;height:100%"></video>
+        </div>
+    </section>
 
-    <body bgcolor=black style=margin:0>
-        <div data-shaka-player-container style=position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover>
-            <video autoplay muted data-shaka-player id=video style=width:100%;height:100%></video>
-</center>
-</div>
-<script>
- src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         (async function() {
             // Function to get the value of a query parameter by name
@@ -73,8 +66,7 @@
                         clearKeys: {
                             '59ed8dc9d4a48857ef8e5865919496cc': '0d3680bd8b349deda8b7fdd1da71b7f8'
                         }
-                    },
-                    poster: 'https://example.com/posters/willhd1.jpg' // Add poster URL
+                    }
                 },
                 {
                     id: 'willhd2',
@@ -83,8 +75,7 @@
                         clearKeys: {
                             '59ed8dc9d4a48857ef8e5865919496cc': '0d3680bd8b349deda8b7fdd1da71b7f8'
                         }
-                    },
-                    poster: 'https://example.com/posters/willhd1.jpg' // Add poster URL
+                    }
                 },
                 {
                     id: 'extra1',
@@ -93,8 +84,7 @@
                         clearKeys: {
                             '1f52934d28a25c51a5dd577a650dcece': '323a46b02a31172c2475406e56fd3be6'
                         }
-                    },
-                    poster: 'https://example.com/posters/willhd1.jpg' // Add poster URL
+                    }
                 },
                 {
                     id: 'extra2',
@@ -103,8 +93,7 @@
                         clearKeys: {
                             '1f52934d28a25c51a5dd577a650dcece': '323a46b02a31172c2475406e56fd3be6'
                         }
-                    },
-                    poster: 'https://example.com/posters/willhd1.jpg' // Add poster URL
+                    }
                 },
                 {
                     id: 'prime1',
@@ -113,8 +102,7 @@
                         clearKeys: {
                             '6da8c268d58a0fe4ff75d297359a8ad7': 'eb0ae4c2c24a52070154499bb09a36cb'
                         }
-                    },
-                    poster: 'https://example.com/posters/willhd1.jpg' // Add poster URL
+                    }
                 },
                 {
                     id: 'prime2',
@@ -123,8 +111,7 @@
                         clearKeys: {
                             '647eb8fbf1657140ea163dc9b3256893': '5c28e72874cd4f73b9ed379957e8ba42'
                         }
-                    },
-                    poster: 'https://example.com/posters/willhd1.jpg' // Add poster URL
+                    }
                 },
                 {
                     id: 'prime3',
@@ -133,8 +120,7 @@
                         clearKeys: {
                             '647eb8fbf1657140ea163dc9b3256893': '5c28e72874cd4f73b9ed379957e8ba42'
                         }
-                    },
-                    poster: 'https://example.com/posters/willhd1.jpg' // Add poster URL
+                    }
                 },
                 {
                     id: 'primehindi',
@@ -143,8 +129,7 @@
                         clearKeys: {
                             '6da8c268d58a0fe4ff75d297359a8ad7': 'eb0ae4c2c24a52070154499bb09a36cb'
                         }
-                    },
-                    poster: 'https://example.com/posters/willhd1.jpg' // Add poster URL
+                    }
                 },
                 {
                     id: 'skyevent1',
@@ -153,8 +138,7 @@
                         clearKeys: {
                             '000546476256963bd054ded3b6ae5800': '1e497068bcc078fdb2f4296bc400ca2b'
                         }
-                    },
-                    poster: 'https://example.com/posters/willhd1.jpg' // Add poster URL
+                    }
                 },
                 {
                     id: 'skyevent2',
@@ -163,8 +147,7 @@
                         clearKeys: {
                             '000546476256963bd054ded3b6ae5800': '1e497068bcc078fdb2f4296bc400ca2b'
                         }
-                    },
-                    poster: 'https://example.com/posters/willhd1.jpg' // Add poster URL
+                    }
                 },
                 {
                     id: 'skycricket1',
@@ -173,8 +156,7 @@
                         clearKeys: {
                             '00053ac1e9b1231eed3eb4e3540b3ae1': '0f03d8541826af3d9acbac975d751165'
                         }
-                    },
-                    poster: 'https://example.com/posters/willhd1.jpg' // Add poster URL
+                    }
                 },
                 {
                     id: 'skycricket2',
@@ -183,8 +165,7 @@
                         clearKeys: {
                             '00053ac1e9b1231eed3eb4e3540b3ae1': '0f03d8541826af3d9acbac975d751165'
                         }
-                    },
-                    poster: 'https://example.com/posters/willhd1.jpg' // Add poster URL
+                    }
                 },
                 {
                     id: 'w720',
@@ -193,8 +174,7 @@
                         clearKeys: {
                             '475d7932b5f352bb92016b75b60c58fa': 'ea37faa137ae8f644105c4fcc189a35f'
                         }
-                    },
-                    poster: 'https://example.com/posters/willhd1.jpg' // Add poster URL
+                    }
                 },
                 {
                     id: 'star1',
@@ -203,8 +183,7 @@
                         clearKeys: {
                             '2ce10517e3d65795b3ab44fb31155915': '5e6a451d1d184c6322071d07b7839260'
                         }
-                    },
-                    poster: 'https://example.com/posters/willhd1.jpg' // Add poster URL
+                    }
                 },
                 {
                     id: 'star2',
@@ -213,8 +192,7 @@
                         clearKeys: {
                             'e9028c1ce4625f4e9182e669853d4141': '4f4c0cbc15f0d99f23326a0f03c4561d'
                         }
-                    },
-                    poster: 'https://example.com/posters/willhd1.jpg' // Add poster URL
+                    }
                 },
                 {
                     id: 'astro',
@@ -287,7 +265,4 @@
         })();
     </script>
 <!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "716ff3f2515d415696096e7d05ddd672"}'></script><!-- Cloudflare Pages Analytics --></body>
-</html></script>
-</body>
-
 </html>
