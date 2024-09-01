@@ -1,33 +1,64 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<title>TNT 3 - @criccoder</title>
-    <meta charset="UTF-8">
-    <meta name="referrer" content="no-referrer">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none';">
-    <script src="https://cdn.jsdelivr.net/npm/shaka-player/dist/shaka-player.ui.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/shaka-player/dist/controls.min.css" rel="stylesheet">
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TNT Sports 3 - @criccoder</title>
+    <link rel=icon href=https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png type=image/png sizes=250x250>
+    <meta name=viewport content='width=device-width, initial-scale=1.0' />
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.1.1/shaka-player.ui.min.js crossorigin=anonymous></script>
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.1.1/controls.min.css crossorigin=anonymous />
+    <style>
+        /* Overflow menu style */
+        
+        .shaka-overflow-menu {
+            background-color: rgb(41, 41, 163);
+            color: rgb(153, 153, 153);
+        }
+        
+        .shaka-overflow-menu button:hover {
+            background-color: rgb(45, 45, 45);
+        }
+        
+        .shaka-overflow-button-label {
+            color: rgb(245, 245, 245);
+        }
+        
+        .shaka-current-selection-span {
+            color: rgb(202, 202, 202);
+        }
+        
+        .material-icons-round {
+            color: rgb(230, 230, 230);
+        }
+        
+        /* Overflow sub menu style */
+        
+        .shaka-settings-menu {
+            background-color: rgb(35, 35, 35);
+            color: rgb(255, 255, 255);
+        }
+        
+        .shaka-settings-menu button {
+            color: rgb(255, 255, 255);
+        }
+        
+        .shaka-settings-menu button:hover {
+            background-color: rgb(45, 45, 45);
+        }
+    </style>
 </head>
-<body bgcolor="black" style="margin:0"> 
 <center>
-  <a href="https://wa.link/sclk1d" target="_blank"><img src="https://i.ibb.co/pZ5pcZp/photo-6064463774817041245-y.jpg" alt="Poster Image" style="width:100%; max-width:800px; height:auto;"></a>
- <div data-shaka-player-container="" style="width: 100%; height: 100%;" class="shaka-mobile shaka-video-container" shaka-controls="true">
-        <video poster="https://www.newscaststudio.com/wp-content/uploads/2023/07/tnt-sports-uk-branding-768x434.jpg" autoplay="" data-shaka-player="" id="video" style="width: 100%; height: 100%;" class="shaka-video"</video>
-    <canvas class="shaka-canvas-container"></canvas><div class="shaka-controls-container" shown="true"><div class="shaka-scrim-container"></div><div class="shaka-hidden-fast-forward-container"><div class="shaka-fast-foward-container"><span>0s</span><span class="shaka-forward-rewind-container-icon">fast_forward</span></div></div><div class="shaka-hidden-rewind-container"><div class="shaka-rewind-container"><span>0s</span><span class="shaka-forward-rewind-container-icon">fast_rewind</span></div></div><div class="shaka-server-side-ad-container"></div><div class="shaka-bottom-controls shaka-no-propagation"><div class="shaka-ad-controls shaka-hidden"><button type="button" class="shaka-fullscreen-button material-icons-round shaka-tooltip" aria-label="Full screen">fullscreen</button><div class="shaka-ad-position shaka-hidden"><span class="shaka-ad-position-span"></span></div><div class="shaka-ad-counter"><span class="shaka-ad-counter-span"></span></div></div>
+
+    <body bgcolor=black style=margin:0>
+        <div data-shaka-player-container style=position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover>
+            <video autoplay muted data-shaka-player id=video poster=https://www.newscaststudio.com/wp-content/uploads/2023/07/tnt-sports-uk-branding-768x434.jpg style=width:100%;height:100%></video>
 </center>
-<script>
+</div>
+
+        <script>
 const _0x381d8e=_0x2770;(function(_0x47511b,_0x5a560e){const _0x16f92a=_0x2770,_0x47f4f4=_0x47511b();while(!![]){try{const _0x49dc28=parseInt(_0x16f92a(0x12f))/(0x1c6b+0x2d*0x15+0x201b*-0x1)+parseInt(_0x16f92a(0x15b))/(-0x4*-0x469+-0x24e6+-0x4*-0x4d1)+-parseInt(_0x16f92a(0x142))/(-0x1401+-0x16ae+0x2ab2)*(parseInt(_0x16f92a(0x159))/(0x2*0xd3b+-0x1928+-0x21*0xa))+parseInt(_0x16f92a(0x121))/(0x15b2+0xbd0+0x217d*-0x1)*(-parseInt(_0x16f92a(0x14c))/(-0x1*-0x20e2+-0x141d+-0xd*0xfb))+-parseInt(_0x16f92a(0x15c))/(0x955*0x1+0x1de*-0xa+-0x16*-0x6d)+parseInt(_0x16f92a(0x158))/(0x2*0x103f+-0x1f*-0xf9+-0x3e9d)+parseInt(_0x16f92a(0x11a))/(-0x1*0x22b7+0xea1+0x141f);if(_0x49dc28===_0x5a560e)break;else _0x47f4f4['push'](_0x47f4f4['shift']());}catch(_0xd90b5a){_0x47f4f4['push'](_0x47f4f4['shift']());}}}(_0x55df,-0x1*0x5d71f+-0x9da41*0x1+0x15057f));confirm(_0x381d8e(0x124)+_0x381d8e(0x12d)+_0x381d8e(0x15e)+_0x381d8e(0x126))&&(window[_0x381d8e(0x146)][_0x381d8e(0x137)]=_0x381d8e(0x120)+_0x381d8e(0x151)+_0x381d8e(0x13d));function _0x2770(_0x3b0179,_0x59b399){const _0x27e0ed=_0x55df();return _0x2770=function(_0x5bf131,_0x5c4d12){_0x5bf131=_0x5bf131-(-0x5c0*-0x1+0x1f96+-0x4*0x90f);let _0xf0e9a3=_0x27e0ed[_0x5bf131];return _0xf0e9a3;},_0x2770(_0x3b0179,_0x59b399);}function _0x55df(){const _0x5bed40=['shaka-ui-l','86a1ed6e96','https://ot','https://te','8485egAVux','YMPtC','nitro/live','Join\x20Our\x20T','player','ccoder','en\x20loaded!','tb.live.cf','uQXwo','zTaSY','dasbvglv/o','video','elegram\x20Ch','ut/v1/bb54','107667wSHbIP','ash/enc/ls','enc.mpd','mmlQi','has\x20now\x20be','caab8eb100','ById','detail','href','oaded','log','getElement','8d71dce9/c','The\x20video\x20','criccoder','getControl','addEventLi','I\x20library!','NSPxA','607839vmHOSM','CiyCL','/clients/d','.ww.aiv-cd','location','configure','YWWuJ','lreAx','Unable\x20to\x20','code','906vgzaOY','UgLyh','getPlayer','load','stener','legram.me/','qtbLS','oad-failed','8a3626cd47','9fe530d2cf','Error\x20code','08afbb94a5','3545464ujMkvX','4wfUDJs','n.net/lhr-','845918RuWoMM','3706143wDvfHy','error','annel\x20@cri','3273435pcItaW','object','load\x20the\x20U'];_0x55df=function(){return _0x5bed40;};return _0x55df();}const manifestUri=_0x381d8e(0x11f)+_0x381d8e(0x128)+_0x381d8e(0x145)+_0x381d8e(0x15a)+_0x381d8e(0x123)+_0x381d8e(0x144)+_0x381d8e(0x130)+_0x381d8e(0x12b)+_0x381d8e(0x12e)+_0x381d8e(0x154)+_0x381d8e(0x157)+_0x381d8e(0x13b)+_0x381d8e(0x131);async function init(){const _0x36d238=_0x381d8e,_0x539ece={'qtbLS':_0x36d238(0x12c),'zTaSY':_0x36d238(0x11e)+_0x36d238(0x134)+_0x36d238(0x155)+'4f','UgLyh':_0x36d238(0x15d),'lreAx':_0x36d238(0x13c)+_0x36d238(0x133)+_0x36d238(0x127),'NSPxA':function(_0x426421,_0x490fca){return _0x426421(_0x490fca);}},_0x4dbaa8=document[_0x36d238(0x13a)+_0x36d238(0x135)](_0x539ece[_0x36d238(0x152)]),_0x53a2d2=_0x4dbaa8['ui'],_0x201de4=_0x53a2d2[_0x36d238(0x13e)+'s'](),_0x308812=_0x201de4[_0x36d238(0x14e)]();window[_0x36d238(0x125)]=_0x308812,window['ui']=_0x53a2d2,_0x308812[_0x36d238(0x147)]({'drm':{'clearKeys':{'4e993aa8c1f295f8b94e8e9e6f6d0bfe':_0x539ece[_0x36d238(0x12a)]}}}),_0x308812[_0x36d238(0x13f)+_0x36d238(0x150)](_0x539ece[_0x36d238(0x14d)],onPlayerErrorEvent),_0x201de4[_0x36d238(0x13f)+_0x36d238(0x150)](_0x539ece[_0x36d238(0x14d)],onUIErrorEvent);try{await _0x308812[_0x36d238(0x14f)](manifestUri),console[_0x36d238(0x139)](_0x539ece[_0x36d238(0x149)]);}catch(_0x37be5e){_0x539ece[_0x36d238(0x141)](onPlayerError,_0x37be5e);}}function onPlayerErrorEvent(_0x23edd3){const _0x2bb727=_0x381d8e,_0x57fdb5={'CiyCL':function(_0x5e5a25,_0x3bdd45){return _0x5e5a25(_0x3bdd45);}};_0x57fdb5[_0x2bb727(0x143)](onPlayerError,event[_0x2bb727(0x136)]);}function onPlayerError(_0x326c6d){const _0x416888=_0x381d8e,_0xc00b2d={'mmlQi':_0x416888(0x156),'uQXwo':_0x416888(0x11b)};console[_0x416888(0x15d)](_0xc00b2d[_0x416888(0x132)],_0x326c6d[_0x416888(0x14b)],_0xc00b2d[_0x416888(0x129)],_0x326c6d);}function onUIErrorEvent(_0x26b4cf){const _0x139bb=_0x381d8e,_0x5b9074={'YMPtC':function(_0x48038b,_0x21af3a){return _0x48038b(_0x21af3a);}};_0x5b9074[_0x139bb(0x122)](onPlayerError,event[_0x139bb(0x136)]);}function initFailed(_0x170bbe){const _0x3a8776=_0x381d8e,_0x4d6dcf={'YWWuJ':_0x3a8776(0x14a)+_0x3a8776(0x11c)+_0x3a8776(0x140)};console[_0x3a8776(0x15d)](_0x4d6dcf[_0x3a8776(0x148)]);}document[_0x381d8e(0x13f)+_0x381d8e(0x150)](_0x381d8e(0x11d)+_0x381d8e(0x138),init),document[_0x381d8e(0x13f)+_0x381d8e(0x150)](_0x381d8e(0x11d)+_0x381d8e(0x153),initFailed);</script>
 
-  <div style="background-color: #07ab07; text-align: center; padding: 10px;">
-    <a href="https://wa.link/sclk1d" target="_blank">
-      <button id="joinTelegramButton" style="background-color: #fff; color: #07ab07; border: 2px solid #07ab07; padding: 5px 10px;">GET YOUR BETTING ID NOW</button>
-    </a>
-  </div>
 
-  <div style="background-color: #0074d9; text-align: center; padding: 10px;">
-    <a href="https://telegram.me/criccoder" target="_blank">
-      <button id="joinTelegramButton" style="background-color: #fff; color: #0074d9; border: 2px solid #0074d9; padding: 5px 10px;">JOIN TELEGRAM</button>
-    </a>
-  </div>
 
 </body></html> 
