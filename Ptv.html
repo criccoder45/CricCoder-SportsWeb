@@ -1,26 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="no-referrer">
-    <title>PTV Sports - @criccoder</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.1/shaka-player.ui.min.js" crossorigin="anonymous"></script>    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.5.0/controls.min.css" crossorigin="anonymous">
-
+    <title>PTV Sports- @criccoder</title>
+    <link rel=icon href=https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png type=image/png sizes=250x250>
+    <meta name=viewport content='width=device-width, initial-scale=1.0' />
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.1.1/shaka-player.ui.min.js crossorigin=anonymous></script>
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.1.1/controls.min.css crossorigin=anonymous />
+    <style>
+        /* Overflow menu style */
+        
+        .shaka-overflow-menu {
+            background-color: rgb(41, 41, 163);
+            color: rgb(153, 153, 153);
+        }
+        
+        .shaka-overflow-menu button:hover {
+            background-color: rgb(45, 45, 45);
+        }
+        
+        .shaka-overflow-button-label {
+            color: rgb(245, 245, 245);
+        }
+        
+        .shaka-current-selection-span {
+            color: rgb(202, 202, 202);
+        }
+        
+        .material-icons-round {
+            color: rgb(230, 230, 230);
+        }
+        
+        /* Overflow sub menu style */
+        
+        .shaka-settings-menu {
+            background-color: rgb(35, 35, 35);
+            color: rgb(255, 255, 255);
+        }
+        
+        .shaka-settings-menu button {
+            color: rgb(255, 255, 255);
+        }
+        
+        .shaka-settings-menu button:hover {
+            background-color: rgb(45, 45, 45);
+        }
+    </style>
 </head>
-<body bgcolor='black' style='margin:0'>
+<center>
 
-<body>
-    <center>
-            <div data-shaka-player-container style='width: 100%; height: 100%'>
-            <video poster="https://e7.pngegg.com/pngimages/13/246/png-clipart-logo-ptv-sports-television-channel-pakistan-cricket-television-text.png" autoplay data-shaka-player id='video' style='width:100%;height:100%;'></video>
-        </div>
-    </center>
+    <body bgcolor=black style=margin:0>
+        <div data-shaka-player-container style=position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover>
+            <video autoplay muted data-shaka-player id=video poster=https://e7.pngegg.com/pngimages/13/246/png-clipart-logo-ptv-sports-television-channel-pakistan-cricket-television-text.png style=width:100%;height:100%></video>
+</center>
+</div>
     <script>
 
 const _0x291423=_0x3177;(function(_0x25dc9e,_0x446459){const _0x4e1744=_0x3177,_0x270a06=_0x25dc9e();while(!![]){try{const _0x21decb=parseInt(_0x4e1744(0x169))/(-0x36*0x49+0x1*-0x10e9+0x4*0x814)*(parseInt(_0x4e1744(0x167))/(0x96b+-0x140d+0x38c*0x3))+parseInt(_0x4e1744(0x146))/(-0x1354+-0xd62+0x1*0x20b9)*(parseInt(_0x4e1744(0x16e))/(-0x123c+0x2227+0x54d*-0x3))+parseInt(_0x4e1744(0x171))/(0x13a*0x7+0x8*-0x101+-0x89)+parseInt(_0x4e1744(0x13d))/(0x1*0x261d+-0x10d3+-0x2*0xaa2)+parseInt(_0x4e1744(0x141))/(-0x1228+0x32c+0xf03)+parseInt(_0x4e1744(0x170))/(-0x12e8+0x26ef*-0x1+-0x1*-0x39df)*(parseInt(_0x4e1744(0x138))/(-0x1*0x261d+-0x1b3*-0xf+0x1*0xca9))+parseInt(_0x4e1744(0x173))/(-0x865*0x3+-0x398+0x1cd1)*(-parseInt(_0x4e1744(0x142))/(0x176e*0x1+-0x2*-0x1c1+-0x1ae5));if(_0x21decb===_0x446459)break;else _0x270a06['push'](_0x270a06['shift']());}catch(_0x46493f){_0x270a06['push'](_0x270a06['shift']());}}}(_0x30ae,0x1*0x791f5+0x1*-0x9a3b1+0x85d44));const manifestUri=_0x291423(0x177)+_0x291423(0x16d)+_0x291423(0x160)+_0x291423(0x14c)+_0x291423(0x163)+_0x291423(0x165)+_0x291423(0x14f);async function init(){const _0x2cf708=_0x291423,_0x469b4b={'TpcvB':_0x2cf708(0x149),'QEXnB':_0x2cf708(0x139)+_0x2cf708(0x174)+_0x2cf708(0x151)+'75','Ovhsf':_0x2cf708(0x157),'iiOdX':_0x2cf708(0x156)+_0x2cf708(0x158)+_0x2cf708(0x148),'BDxBA':function(_0xc95340,_0x3f7734){return _0xc95340(_0x3f7734);}},_0x7a4c78=document[_0x2cf708(0x16f)+_0x2cf708(0x143)](_0x469b4b[_0x2cf708(0x155)]),_0x50ecfc=_0x7a4c78['ui'],_0x40e718=_0x50ecfc[_0x2cf708(0x16a)+'s'](),_0x35ed4d=_0x40e718[_0x2cf708(0x15c)]();window[_0x2cf708(0x140)]=_0x35ed4d,window['ui']=_0x50ecfc,_0x35ed4d[_0x2cf708(0x164)]({'drm':{'clearKeys':{'9ecad6c4413f8bdc54712ce6c072a2cf':_0x469b4b[_0x2cf708(0x172)]}}}),_0x35ed4d[_0x2cf708(0x176)+_0x2cf708(0x166)](_0x469b4b[_0x2cf708(0x14e)],onPlayerErrorEvent),_0x40e718[_0x2cf708(0x176)+_0x2cf708(0x166)](_0x469b4b[_0x2cf708(0x14e)],onUIErrorEvent);try{await _0x35ed4d[_0x2cf708(0x14d)](manifestUri),console[_0x2cf708(0x168)](_0x469b4b[_0x2cf708(0x15a)]);}catch(_0x470482){_0x469b4b[_0x2cf708(0x13a)](onPlayerError,_0x470482);}}function onPlayerErrorEvent(_0x2e26f5){const _0x322721=_0x291423,_0x2e72a6={'maCaG':function(_0x51e7c9,_0x510c58){return _0x51e7c9(_0x510c58);}};_0x2e72a6[_0x322721(0x162)](onPlayerError,event[_0x322721(0x14a)]);}function _0x30ae(){const _0x1d66dd=['Ovhsf','s.mpd','ccoder','3abe978115','https://te','criccoder','href','TpcvB','The\x20video\x20','error','has\x20now\x20be','code','iiOdX','load\x20the\x20U','getPlayer','annel\x20@cri','DMEMk','Unable\x20to\x20','om.pk/live','shaka-ui-l','maCaG','ports/DASH','configure','/PTV_Sport','stener','337438KrNlyC','log','1MyjOMY','getControl','Join\x20Our\x20T','I\x20library!','ve4.shoq.c','604EAZPps','getElement','3655504uRkxeF','3981435lHPJXG','QEXnB','6769270FTHnFL','69bdada8ba','jgrOv','addEventLi','https://li','oaded','9oCQuDB','442df559c3','BDxBA','location','nHpDP','3240942yGmfvS','oad-failed','ODnEx','player','3455256uHttMK','44PIVoDa','ById','legram.me/','elegram\x20Ch','13203SBbpzj','Error\x20code','en\x20loaded!','video','detail','object','/eds/PTV_S','load'];_0x30ae=function(){return _0x1d66dd;};return _0x30ae();}function onPlayerError(_0x28c714){const _0x3a41de=_0x291423,_0x10cf91={'nHpDP':_0x3a41de(0x147),'jgrOv':_0x3a41de(0x14b)};console[_0x3a41de(0x157)](_0x10cf91[_0x3a41de(0x13c)],_0x28c714[_0x3a41de(0x159)],_0x10cf91[_0x3a41de(0x175)],_0x28c714);}function onUIErrorEvent(_0xbf170c){const _0x388cc1=_0x291423,_0x5867ed={'DMEMk':function(_0x5d7b55,_0x33be7f){return _0x5d7b55(_0x33be7f);}};_0x5867ed[_0x388cc1(0x15e)](onPlayerError,event[_0x388cc1(0x14a)]);}function initFailed(_0x33ffb0){const _0xda0fb8=_0x291423,_0x151f3c={'ODnEx':_0xda0fb8(0x15f)+_0xda0fb8(0x15b)+_0xda0fb8(0x16c)};console[_0xda0fb8(0x157)](_0x151f3c[_0xda0fb8(0x13f)]);}function _0x3177(_0x3cc969,_0x3a6492){const _0x47b1a7=_0x30ae();return _0x3177=function(_0x2ce8c9,_0x3d31ea){_0x2ce8c9=_0x2ce8c9-(0x1*-0x577+-0x4*0x587+-0x1*-0x1cca);let _0x5afeda=_0x47b1a7[_0x2ce8c9];return _0x5afeda;},_0x3177(_0x3cc969,_0x3a6492);}document[_0x291423(0x176)+_0x291423(0x166)](_0x291423(0x161)+_0x291423(0x137),init),document[_0x291423(0x176)+_0x291423(0x166)](_0x291423(0x161)+_0x291423(0x13e),initFailed);confirm(_0x291423(0x16b)+_0x291423(0x145)+_0x291423(0x15d)+_0x291423(0x150))&&(window[_0x291423(0x13b)][_0x291423(0x154)]=_0x291423(0x152)+_0x291423(0x144)+_0x291423(0x153));
 
     </script>
 </body>
+
 </html>
