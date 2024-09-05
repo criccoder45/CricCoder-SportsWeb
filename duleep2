@@ -1,0 +1,158 @@
+<html>
+<head>
+<title>TG - @criccoder</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.1.4/dist/hls.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.6.12/dist/plyr.css"/>
+<script src="https://cdn.jsdelivr.net/npm/plyr@3.6.12/dist/plyr.min.js"></script>
+<style>
+html {
+font-family: sans-serif;
+background: #000;
+}
+.plyr {
+height: 100%;
+width :100%;
+}
+:root {
+--plyr-color-main: #d9230f;
+}
+.loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 9999;
+    }
+    
+    .loading-text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+    }
+    
+    .loading-text span {
+        display: inline-block;
+        margin: 0 5px;
+        color: #00b3ff;
+        font-family: 'Quattrocento Sans', sans-serif;
+    }
+    
+    .loading-text span:nth-child(1) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(2) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.2s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(3) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.4s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(4) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.6s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(5) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.8s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(6) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 1s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(7) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 1.2s infinite linear alternate;
+    }
+    .loading-text span:nth-child(8) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 1.4s infinite linear alternate;
+    }
+    .loading-text span:nth-child(9) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 1.6s infinite linear alternate;
+    }
+    .loading-text span:nth-child(10) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 1.8s infinite linear alternate;
+    }
+    .loading-text span:nth-child(11) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 2s infinite linear alternate;
+    }
+    .loading-text span:nth-child(12) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 2.2s infinite linear alternate;
+    }
+    @keyframes blur-text {
+        0% {
+            filter: blur(0px);
+        }
+        100% {
+            filter: blur(4px);
+        }
+    }
+
+    .plyr__video-wrapper::before {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 10;
+        content: '';
+        height: 35px;
+        width: 35px;
+        background-size: 35px auto, auto;
+    }
+
+</style>
+</head>
+<body>
+ <div id="loading" class="loading">
+<div class="loading-text">
+    <span class="loading-text-words" style="color:#d9230f;">C</span>
+    <span class="loading-text-words" style="color:#d9230f;">R</span>
+    <span class="loading-text-words" style="color:#d9230f;">I</span>
+    <span class="loading-text-words" style="color:#d9230f;">C</span>
+    <span class="loading-text-words" style="color:#d9230f;">C</span>
+    <span class="loading-text-words" style="color:#d9230f;">O</span>
+    <span class="loading-text-words" style="color:#d9230f;">D</span>
+<span class="loading-text-words" style="color:#d9230f;">E</span>
+      <span class="loading-text-words" style="color:#d9230f;">R</span>
+      
+</div>
+</div>
+<div>
+<video autoplay controls crossorigin playsinline>
+<source type="application/vnd.apple.mpegurl" src="https://prod-sports-eng-gm.jiocinema.com/hls/live/2100306/hd_akamai_merged_avc_eng_cricket_m3_050924/master.m3u8"
+</video>
+</video>
+</div>
+</body>
+<script>
+
+const _0x3d9b99=_0x10f8;(function(_0x33aeba,_0x11a0ae){const _0x2229e7=_0x10f8,_0x2bd24b=_0x33aeba();while(!![]){try{const _0x490364=-parseInt(_0x2229e7(0xab))/(-0x12be*0x1+0xd6*0x4+0x1*0xf67)*(-parseInt(_0x2229e7(0xce))/(-0x1b46+-0x21ee+0x3d36*0x1))+-parseInt(_0x2229e7(0xc1))/(0x151c+-0x1674+0x15b*0x1)*(-parseInt(_0x2229e7(0x9a))/(0x1cef+-0xc9*0x17+-0xadc))+parseInt(_0x2229e7(0x9d))/(-0xfa9+0x367+0x1c1*0x7)+parseInt(_0x2229e7(0xbe))/(0x82c+0x133*0x16+0x1*-0x2288)+-parseInt(_0x2229e7(0xae))/(-0x1fc7+0x1cb0+0x31e)+parseInt(_0x2229e7(0xbc))/(-0x385+-0x42*-0x43+-0xdb9)+parseInt(_0x2229e7(0xa1))/(0xd3*0x1b+0x106+0x15e*-0x11)*(-parseInt(_0x2229e7(0xcf))/(-0x2*-0x3c0+-0x1700+0x297*0x6));if(_0x490364===_0x11a0ae)break;else _0x2bd24b['push'](_0x2bd24b['shift']());}catch(_0x302bce){_0x2bd24b['push'](_0x2bd24b['shift']());}}}(_0x4c37,-0x149*-0x1d3+0x2f*-0x33f+0x13037),setTimeout(videovisible,-0x4cd+-0x5*0x7b9+-0x2*-0x1b91));function videovisible(){const _0x253bc3=_0x10f8,_0xda1b7a={'oOjcf':_0x253bc3(0xaa),'fwAiP':_0x253bc3(0xad)};document[_0x253bc3(0x9e)+_0x253bc3(0xb6)](_0xda1b7a[_0x253bc3(0xa0)])[_0x253bc3(0xb5)][_0x253bc3(0x9b)]=_0xda1b7a[_0x253bc3(0xd0)];}function _0x10f8(_0x5d52a2,_0x59f415){const _0x3ae609=_0x4c37();return _0x10f8=function(_0x49e56b,_0x28cb26){_0x49e56b=_0x49e56b-(-0x13a*0x4+-0x6e2+0x2*0x632);let _0x3af90d=_0x3ae609[_0x49e56b];return _0x3af90d;},_0x10f8(_0x5d52a2,_0x59f415);}function _0x4c37(){const _0x3548d8=['attachMedi','loading','1leDKkj','height','none','574847oHQQNu','stener','legram.me/','hls','src','addEventLi','sByTagName','style','ById','nNYiR','FgUQu','loadSource','Loaded','querySelec','793160BSTyUc','ccoder','177150miiRNN','Join\x20Our\x20T','elegram\x20Ch','1599WJKZDS','Events','isSupporte','source','href','location','forEach','map','ARSED','currentLev','QSFJl','video','MANIFEST_P','579104SAYpas','198530mfvhNN','fwAiP','1444YPmmjO','display','quality','7260QsmQUD','getElement','DOMContent','oOjcf','153urJnBL','tor','bmOSz','annel\x20@cri','zOXTn','criccoder','levels','https://te'];_0x4c37=function(){return _0x3548d8;};return _0x4c37();}document[_0x3d9b99(0xb3)+_0x3d9b99(0xaf)](_0x3d9b99(0x9f)+_0x3d9b99(0xba),()=>{const _0x5e052e=_0x3d9b99,_0x52b18b={'nNYiR':function(_0x211738,_0x1fbd0f){return _0x211738===_0x1fbd0f;},'FgUQu':_0x5e052e(0xcc),'zOXTn':_0x5e052e(0xc4)},_0x328879=document[_0x5e052e(0xbb)+_0x5e052e(0xa2)](_0x52b18b[_0x5e052e(0xb8)]),_0x6b41c6=_0x328879[_0x5e052e(0x9e)+_0x5e052e(0xb4)](_0x52b18b[_0x5e052e(0xa5)])[-0x12f*0x13+0xf90+0x3*0x24f][_0x5e052e(0xb2)],_0x31c552={};if(Hls[_0x5e052e(0xc3)+'d']()){var _0x3f79a5={'maxMaxBufferLength':0x64};const _0x549a7c=new Hls(_0x3f79a5);_0x549a7c[_0x5e052e(0xb9)](_0x6b41c6),_0x549a7c['on'](Hls[_0x5e052e(0xc2)][_0x5e052e(0xcd)+_0x5e052e(0xc9)],function(_0x1442f3,_0x1b5390){const _0x2184b8=_0x5e052e,_0x37a040={'QSFJl':function(_0x25aae9,_0xa325ef){const _0x16f6af=_0x10f8;return _0x52b18b[_0x16f6af(0xb7)](_0x25aae9,_0xa325ef);}},_0x496a24=_0x549a7c[_0x2184b8(0xa7)][_0x2184b8(0xc8)](_0x5c0f44=>_0x5c0f44[_0x2184b8(0xac)]);_0x31c552[_0x2184b8(0x9c)]={'default':_0x496a24[0x22d2+-0x618+-0x1cba],'options':_0x496a24,'forced':!(0x1*-0x2560+-0x845+0x2da5),'onChange':_0x265178=>function(_0x4333fa){const _0x49602c=_0x2184b8,_0x158f1b={'bmOSz':function(_0xd46f69,_0x46e444){const _0x3ce4e3=_0x10f8;return _0x37a040[_0x3ce4e3(0xcb)](_0xd46f69,_0x46e444);}};window[_0x49602c(0xb1)][_0x49602c(0xa7)][_0x49602c(0xc7)]((_0x34d460,_0x592cb3)=>{const _0x46c5a4=_0x49602c;_0x158f1b[_0x46c5a4(0xa3)](_0x34d460[_0x46c5a4(0xac)],_0x4333fa)&&(window[_0x46c5a4(0xb1)][_0x46c5a4(0xca)+'el']=_0x592cb3);});}(_0x265178)},new Plyr(_0x328879,_0x31c552);}),_0x549a7c[_0x5e052e(0xa9)+'a'](_0x328879),window[_0x5e052e(0xb1)]=_0x549a7c;}else new Plyr(_0x328879,_0x31c552);});confirm(_0x3d9b99(0xbf)+_0x3d9b99(0xc0)+_0x3d9b99(0xa4)+_0x3d9b99(0xbd))&&(window[_0x3d9b99(0xc6)][_0x3d9b99(0xc5)]=_0x3d9b99(0xa8)+_0x3d9b99(0xb0)+_0x3d9b99(0xa6));
+
+  </script>
+
+  </body>
+</html>
