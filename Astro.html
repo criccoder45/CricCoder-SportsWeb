@@ -1,63 +1,73 @@
-SHAKA PLAYER CODE
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="no-referrer">
-    <title>Star Sports Hindi - @criccoder</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.1/shaka-player.ui.min.js" crossorigin="anonymous"></script>    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.5.0/controls.min.css" crossorigin="anonymous">
-    <script>  if(confirm("Join Our Telegram Channel @CricCoder")) { window.location.href = "https://telegram.me/livecricchd" }</script>
-
+    <title>Astro Cricket</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        #player {
+            width: 100%;
+            height: 100vh; /* Full viewport height for the player */
+        }
+        .telegram-toggle { 
+            position: fixed; 
+            top: 10px; 
+            right: 10px; 
+            background-color: #0088cc; 
+            color: #fff; 
+            padding: 10px 15px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            display: flex; 
+            align-items: center; 
+            z-index: 1001;
+        }
+        .telegram-toggle img { 
+            width: 20px; 
+            height: 20px; 
+            margin-right: 5px; 
+        }
+    </style>
 </head>
-<body bgcolor='black' style='margin:0'>
-
 <body>
-    <center>
-            <div data-shaka-player-container style='width: 100%; height: 100%'>
-            <video poster="https://disneystar.com/media/2237/ss1-hd-hindi.jpg" autoplay data-shaka-player id='video' style='width:100%;height:100%;'></video>
-        </div>
-    </center>
-    <script>
-        const manifestUri = "https://d1yws6emo43ny.cloudfront.net/CH5/masterCH5.mpd";
-        async function init() {
-            const video = document.getElementById('video');
-            const ui = video['ui'];
-            const controls = ui.getControls();
-            const player = controls.getPlayer();
-            window.player = player;
-            window.ui = ui;
-            player.configure({
-                drm: {
-                    "clearKeys": {
-                        "a8eb0f152c6e429ca7a53f399aadf257":"c593c2eeea62742285b99e4d87b1c84a" 
-                    }
-                }
-            });
-            player.addEventListener('error', onPlayerErrorEvent);
-            controls.addEventListener('error', onUIErrorEvent);
-            try {
-                await player.load(manifestUri);
-                console.log('The video has now been loaded!');
-            } catch (error) {
-                onPlayerError(error);
-        }}
-        function onPlayerErrorEvent(errorEvent) {
-            onPlayerError(event.detail);
-        }
-        function onPlayerError(error) {
-            console.error('Error code', error.code, 'object', error);
-        }
-        function onUIErrorEvent(errorEvent) {
-            onPlayerError(event.detail);
-        }
-        function initFailed(errorEvent) {
-            console.error('Unable to load the UI library!');
-        }
-        document.addEventListener('shaka-ui-loaded', init);
-        document.addEventListener('shaka-ui-load-failed', initFailed);
-    </script>
+<div id="player"></div>
+
+<script src="//ssl.p.jwpcdn.com/player/v/8.25.1/jwplayer.js"></script>
+<script>
+    jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
+
+    window.onload = function() {
+        var playerInstance = jwplayer("player");
+        var source = {
+            file: "https://d1yws6emo43ny.cloudfront.net/CH5/masterCH5.mpd",
+            type: "dash",
+            drm: { 
+                clearkey: { 
+                    keyId: "a8eb0f152c6e429ca7a53f399aadf257", 
+                    key: "c593c2eeea62742285b99e4d87b1c84a" 
+                } 
+            },
+            onXhrOpen: function(xhr, url) {
+                xhr.setRequestHeader('Authorization', 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3bXZlciI6Miwid21pZGZtdCI6ImFzY2lpIiwid21pZHR5cCI6MSwid21rZXl2ZXIiOjEsIndtbWRsZW4iOjUxMiwid21pZCI6Ik1UZGxNR0kyWWpjdE4yUXpaaTAwTXpNd0xUazFZekF0TmpZMU5HTmpOV0U0T1RVeSIsIndtb3BpZCI6MzIsImV4cCI6MTcyNTgzOTAzMSwiaWF0IjoxNzI1MjM1MDMxfQ.FpXxuPZh5wuUcGotZKUw8f7GxIDLJbGChBllWVXFEsk');
+            }
+        };
+
+        playerInstance.setup({
+            playlist: [{ sources: [source] }],
+            width: "100%",
+            height: "100%",
+            aspectratio: "16:9",
+            autostart: true
+        });
+    };
+</script>
 </body>
 </html>
