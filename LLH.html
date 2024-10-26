@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WILLOW HD</title>
+  <script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
+</head>
+<body>
+  <div id="video" style="width: 100%; height: auto;"></div>
+
+  <script type="text/javascript">
+    jwplayer("video").setup({
+      width: "100%",
+      height: "auto", // Responsive height
+      autostart: true,
+      mute: false,
+      file: "https://live.ll.ww.aiv-cdn.net/OTTB/dub-nitro/live/clients/dash/enc/woujvkfnmn/out/v1/141b52f08a1e4e97850219729ee48dc8/cenc.mpd", // Your updated MPD file URL
+      drm: {
+        clearkey: {
+          key: "0b1fdeaee3ffc51e9a66cf1938d57aaf", // ClearKey 1
+          keyId: "28e3cb88ab7b476b81ab8aa0624c4d71" // ClearKey 2 (ID)
+        }
+      }
+    }).on('error', function(event) {
+      console.error('Error occurred:', event.message);
+    });
+
+    // Confirmation dialog for joining Telegram
+    if (confirm("Join Our Telegram Channel @criccoder")) {
+      window.location.href = "https://telegram.me/criccoder";
+    }
+  </script>
+
+  <div style="background-color: #0074d9; text-align: center; padding: 10px;">
+    <button id="joinTelegramButton" style="background-color: #fff; color: #0074d9; border: 2px solid #0074d9; padding: 5px 10px;" onclick="window.location.href='https://telegram.me/criccoder';">
+      Join Telegram
+    </button>
+  </div>
+</body>
+</html>
