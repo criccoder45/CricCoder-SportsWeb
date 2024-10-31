@@ -1,18 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@criccoder</title>
     <script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
     <script>jwplayer.key = "MOYE-MOYE";</script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        #player {
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+        }
+    </style>
 </head>
 <body>
     <div id="player"></div>
 
     <script>
+        var player = jwplayer("player");
+        player.setup({
+            file: "https://bcovlive-a.akamaihd.net/f5fec2a70fa64f86a1bc3ee42e94e355/ap-southeast-2/5833133821001/4819247c158b48f68618f1601c0e37a1/playlist_ssaiM.m3u8",
+            width: "100%",
+            height: "100%",
+            playbackRateControls: true,
+        });
 
-var _0x4e5fd9=_0x44e2;function _0x44e2(_0x44a856,_0x5108a9){var _0x2060d8=_0x2219();return _0x44e2=function(_0x2bfa25,_0x2fa364){_0x2bfa25=_0x2bfa25-(0x54e+0x1*-0x14f8+0x111d);var _0x13b95f=_0x2060d8[_0x2bfa25];return _0x13b95f;},_0x44e2(_0x44a856,_0x5108a9);}(function(_0x1058a0,_0x5a2462){var _0x8f94ec=_0x44e2,_0x35bb1c=_0x1058a0();while(!![]){try{var _0x49f3d0=-parseInt(_0x8f94ec(0x186))/(-0x22*0x10d+-0x1b85+0x3f40)+parseInt(_0x8f94ec(0x18a))/(-0x7*-0x15b+-0x124b+0x5e*0x18)+-parseInt(_0x8f94ec(0x181))/(-0x12b+0x703*0x4+0x26*-0xb5)*(-parseInt(_0x8f94ec(0x183))/(-0x551*-0x1+0x17ab*-0x1+0x125e))+-parseInt(_0x8f94ec(0x18f))/(-0x52d*-0x1+-0x366*0x1+-0x3*0x96)*(-parseInt(_0x8f94ec(0x176))/(0x134f+0x70+0x33*-0x63))+-parseInt(_0x8f94ec(0x18e))/(-0x7*0xdd+-0x22eb+0x28fd)+-parseInt(_0x8f94ec(0x184))/(0x3*0x117+-0x139d+0x830*0x2)+-parseInt(_0x8f94ec(0x195))/(0xe73+-0x1*-0x3bf+-0x1229)*(parseInt(_0x8f94ec(0x17a))/(-0x22b3+0x3*-0xcb3+0x246b*0x2));if(_0x49f3d0===_0x5a2462)break;else _0x35bb1c['push'](_0x35bb1c['shift']());}catch(_0x481e66){_0x35bb1c['push'](_0x35bb1c['shift']());}}}(_0x2219,0x5f413+0x43*-0x13a3+-0x2*-0x1c685));var player=jwplayer(_0x4e5fd9(0x196));player[_0x4e5fd9(0x175)]({'file':_0x4e5fd9(0x180)+_0x4e5fd9(0x182)+_0x4e5fd9(0x197)+_0x4e5fd9(0x188)+_0x4e5fd9(0x178)+_0x4e5fd9(0x174)+_0x4e5fd9(0x194)+_0x4e5fd9(0x190)+_0x4e5fd9(0x17b)+_0x4e5fd9(0x18b)+_0x4e5fd9(0x189)+_0x4e5fd9(0x177)+_0x4e5fd9(0x185)+_0x4e5fd9(0x18c)+_0x4e5fd9(0x187),'width':_0x4e5fd9(0x17c),'height':_0x4e5fd9(0x17c),'playbackRateControls':!![]});confirm(_0x4e5fd9(0x193)+_0x4e5fd9(0x179)+_0x4e5fd9(0x17e)+_0x4e5fd9(0x191))&&(window[_0x4e5fd9(0x173)][_0x4e5fd9(0x17f)]=_0x4e5fd9(0x17d)+_0x4e5fd9(0x18d)+_0x4e5fd9(0x192));function _0x2219(){var _0x55de39=['100%','https://te','annel\x20@cri','href','https://bc','2019gbrQzc','ovlive-a.a','3076AkYrFi','198704qMtdpx','0e37a1/pla','175722SbnLBZ','M.m3u8','t/f5fec2a7','7c158b48f6','373864ncNRik','001/481924','ylist_ssai','legram.me/','2234512ESaAUL','20ZieRsI','utheast-2/','ccoder','criccoder','Join\x20Our\x20T','e355/ap-so','37197jFxdeK','player','kamaihd.ne','location','bc3ee42e94','setup','778212ETPLGT','8618f1601c','0fa64f86a1','elegram\x20Ch','1010EyNbhf','5833133821'];_0x2219=function(){return _0x55de39;};return _0x2219();}
+        // Function to make the player fullscreen
+        function makeFullScreen() {
+            const playerElement = document.getElementById('player');
+            if (playerElement.requestFullscreen) {
+                playerElement.requestFullscreen();
+            } else if (playerElement.mozRequestFullScreen) { // Firefox
+                playerElement.mozRequestFullScreen();
+            } else if (playerElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                playerElement.webkitRequestFullscreen();
+            } else if (playerElement.msRequestFullscreen) { // IE/Edge
+                playerElement.msRequestFullscreen();
+            }
+        }
 
+        // Automatically request fullscreen when the player is ready
+        player.on('ready', function() {
+            makeFullScreen();
+        });
 
-   </script>
+        if (confirm("Join Our Telegram Channel @criccoder")) {
+            window.location.href = "https://telegram.me/criccoder";
+        }
+    </script>
 </body>
 </html>
