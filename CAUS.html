@@ -11,11 +11,16 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: hidden;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            background-color: black; /* Optional: Background color */
         }
         #player {
-            width: 100vw; /* Full viewport width */
-            height: 100vh; /* Full viewport height */
+            width: 100%; /* Full width */
+            max-width: 1200px; /* Max width for larger screens */
+            height: auto; /* Auto height to maintain aspect ratio */
+            aspect-ratio: 16 / 9; /* Aspect ratio for the player */
         }
     </style>
 </head>
@@ -31,28 +36,10 @@
             playbackRateControls: true,
         });
 
-        // Function to make the player fullscreen
-        function makeFullScreen() {
-            const playerElement = document.getElementById('player');
-            if (playerElement.requestFullscreen) {
-                playerElement.requestFullscreen();
-            } else if (playerElement.mozRequestFullScreen) { // Firefox
-                playerElement.mozRequestFullScreen();
-            } else if (playerElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
-                playerElement.webkitRequestFullscreen();
-            } else if (playerElement.msRequestFullscreen) { // IE/Edge
-                playerElement.msRequestFullscreen();
-            }
-        }
-
-        // Automatically request fullscreen when the player is ready
-        player.on('ready', function() {
-            makeFullScreen();
-        });
-
         if (confirm("Join Our Telegram Channel @criccoder")) {
             window.location.href = "https://telegram.me/criccoder";
         }
     </script>
 </body>
 </html>
+
