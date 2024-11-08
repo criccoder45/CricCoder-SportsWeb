@@ -1,63 +1,104 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>CricMax Life - @criccoder</title>
-    <link rel=icon href=https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png type=image/png sizes=250x250>
-    <meta name=viewport content='width=device-width, initial-scale=1.0' />
-    <script src=https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.1.1/shaka-player.ui.min.js crossorigin=anonymous></script>
-    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.1.1/controls.min.css crossorigin=anonymous />
-    <style>
-        /* Overflow menu style */
-        
-        .shaka-overflow-menu {
-            background-color: rgb(41, 41, 163);
-            color: rgb(153, 153, 153);
-        }
-        
-        .shaka-overflow-menu button:hover {
-            background-color: rgb(45, 45, 45);
-        }
-        
-        .shaka-overflow-button-label {
-            color: rgb(245, 245, 245);
-        }
-        
-        .shaka-current-selection-span {
-            color: rgb(202, 202, 202);
-        }
-        
-        .material-icons-round {
-            color: rgb(230, 230, 230);
-        }
-        
-        /* Overflow sub menu style */
-        
-        .shaka-settings-menu {
-            background-color: rgb(35, 35, 35);
-            color: rgb(255, 255, 255);
-        }
-        
-        .shaka-settings-menu button {
-            color: rgb(255, 255, 255);
-        }
-        
-        .shaka-settings-menu button:hover {
-            background-color: rgb(45, 45, 45);
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro Cricket HD</title>
+
+    <!-- Shaka Player UI and Controls CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.8.8/shaka-player.ui.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.9.3/controls.min.css" rel="stylesheet">
+
+    <style type="text/css">
+        * {
+            user-select: auto !important;
+            -webkit-user-select: auto !important;
         }
     </style>
 </head>
-<center>
+<body bgcolor="black" style="margin:0;">
 
-    <body bgcolor=black style=margin:0>
-        <div data-shaka-player-container style=position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover>
-            <video autoplay muted data-shaka-player id=video style=width:100%;height:100%></video>
-</center>
-</div>
-<script>
-    if(confirm("Join Our Telegram Channel @criccoder")) { window.location.href = "https://telegram.me/criccoder" }
-    async function init(){let e=document.getElementById("video"),r=e.ui,n=r.getControls(),o=n.getPlayer();o.configure({drm:{clearKeys:{"4301796d6d67374043c4a43c18dff7ea":"96a3dc8766317aa169149a604928ebb6"}}}),r.configure({controlPanelElements:["play_pause","mute","volume","spacer","time_and_duration","quality","fullscreen","overflow_menu"],'volumeBarColors':{base:'rgba(63, 187, 1, 1)',level:'rgb(255, 69, 0)',},'seekBarColors':{base:'rgb(41, 41, 163)',buffered:'rgb(35, 99, 3)',played:'rgba(63, 187, 1, 1)',}}),window.player=o,window.ui=r,o.addEventListener("error",onPlayerErrorEvent),n.addEventListener("error",onUIErrorEvent);try{await o.load("https://live2.shoq.com.pk/live/eds/Criclife2/DASH/Criclife2.mpd"),console.log("The video has now been loaded!")}catch(a){onPlayerError(a)}}function onPlayerErrorEvent(e){onPlayerError(event.detail)}function onPlayerError(e){console.error("Error code",e.code,"object",e)}function onUIErrorEvent(e){onPlayerError(event.detail)}function initFailed(e){console.error("Unable to load the UI library!")}document.addEventListener("shaka-ui-loaded",init),document.addEventListener("shaka-ui-load-failed",initFailed);
-</script>
+    <center>
+        <!-- Video container with Shaka Player -->
+        <div data-shaka-player-container="" style="width: 100%; height: 100%; cursor: none;" class="shaka-mobile shaka-video-container" shaka-controls="true">
+            <video poster="https://linear-poster.astro.com.my/prod/poster/Astro-Cricket_2024_IVP_LAND_917x516.jpg" autoplay="" data-shaka-player="" id="video" style="width: 100%; height: 100%;" class="shaka-video" src="blob:https://t20wc.pages.dev/da763d4e-fd51-4e2a-a817-2b73e4643682"></video>
+        </div>
+    </center>
+
+    <script>
+        // Prompt to join the Telegram channel
+        if (confirm("Join Our Telegram Channel @criccoder")) {
+            window.location.href = "https://telegram.me/criccoder";
+        }
+
+        // Define the manifest URI for the video stream
+        const manifestUri = 'https://live2.shoq.com.pk/live/eds/Criclife2/DASH/Criclife2.mpd?';
+
+        async function init() {
+            // Get the video element and its UI
+            const video = document.getElementById('video');
+            const ui = video['ui'];
+            const controls = ui.getControls();
+            const player = controls.getPlayer();
+
+            // Configuration for the UI and player controls
+            const config = {
+                'controlPanelElements': ['play_pause', 'time_and_duration', 'spacer', 'mute', 'picture_in_picture', 'playback_rate', 'quality', 'fullscreen'],
+                'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+            };
+            ui.configure(config);
+
+            // Configure DRM (Digital Rights Management) settings
+            player.configure({
+                drm: {
+                    clearKeys: {
+                        '4301796d6d67374043c4a43c18dff7ea': '96a3dc8766317aa169149a604928ebb6', // Clear key DRM
+                    }
+                }
+            });
+
+            // Attach player and UI to the window for debugging
+            window.player = player;
+            window.ui = ui;
+
+            // Add event listeners for error handling
+            player.addEventListener('error', onPlayerErrorEvent);
+            controls.addEventListener('error', onUIErrorEvent);
+
+            // Try to load the video stream asynchronously
+            try {
+                await player.load(manifestUri);
+                console.log('The video has now been loaded!');
+            } catch (error) {
+                onPlayerError(error);
+            }
+        }
+
+        // Error handler for player errors
+        function onPlayerErrorEvent(errorEvent) {
+            onPlayerError(errorEvent.detail);
+        }
+
+        // Log and handle player errors
+        function onPlayerError(error) {
+            console.error('Error code', error.code, 'object', error);
+        }
+
+        // Error handler for UI errors
+        function onUIErrorEvent(errorEvent) {
+            onPlayerError(errorEvent.detail);
+        }
+
+        // Handle Shaka UI load failure
+        function initFailed(errorEvent) {
+            console.error('Unable to load the UI library!');
+        }
+
+        // Listen for custom Shaka UI events to initialize the player
+        document.addEventListener('shaka-ui-loaded', init);
+        document.addEventListener('shaka-ui-load-failed', initFailed);
+    </script>
+
 </body>
-
-</html> 
+</html>
